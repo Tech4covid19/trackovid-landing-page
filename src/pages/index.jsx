@@ -1,9 +1,9 @@
 import React from "react";
 
-import SEO from "@/components/seos";
-import Header from "@/components/headers";
-import Layout from "@/components/layouts";
-import Hero from "@/sections/heros";
+import SEO from "@/components/seo";
+import Header from "@/components/header";
+import Layout from "@/components/layout";
+import Hero from "@/sections/hero";
 
 const IndexPage = () => {
   return (
