@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #63717e;
+}
+
+.image {
+  width: 14px;
+  height: 14px;
+  margin: 0 4px;
+}
