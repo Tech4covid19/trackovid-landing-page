@@ -1,6 +1,7 @@
 const path = require("path");
 
 module.exports = {
+  pathPrefix: "/trackovid-landing-page",
   siteMetadata: {
     siteUrl: "https://example.com",
     title: "Trackovid",
