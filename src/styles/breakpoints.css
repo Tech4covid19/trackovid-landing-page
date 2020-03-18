@@ -1,0 +1,32 @@
+$breakpoint-mobile: 986px;
+$breakpoint-desktop: 1268px;
+
+@mixin breakpoint-mobile-only {
+  @media screen and (width <= $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet-only {
+  @media screen and (width > $breakpoint-mobile) and (width < $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet-and-above {
+  @media screen and (width > $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet-and-below {
+  @media screen and (width < $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin breakpoint-desktop-only {
+  @media screen and (width >= $breakpoint-desktop) {
+    @content;
+  }
+}

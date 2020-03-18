@@ -1,0 +1,18 @@
+@import "../../styles/all.css";
+
+.root {
+  box-sizing: content-box;
+  padding: 32px;
+
+  @include breakpoint-desktop-only {
+    margin: 0 auto;
+  }
+
+  @include breakpoint-tablet-only {
+    margin: 0 auto;
+  }
+
+  @include breakpoint-mobile-only {
+    margin: 0 auto;
+  }
+}
