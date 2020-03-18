@@ -37,12 +37,14 @@
 }
 
 .regular {
-  font-family: $font-family;
+  @extend %font-family;
+
   font-weight: $font-weight-regular;
 }
 
 .medium {
-  font-family: $font-family;
+  @extend %font-family;
+
   font-weight: $font-weight-medium;
 }
 
@@ -57,4 +59,3 @@
 .gray {
   color: $gray;
 }
-
