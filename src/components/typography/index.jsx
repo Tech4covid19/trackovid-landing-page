@@ -7,8 +7,7 @@ import styles from "./index.module.css";
 const Typography = ({ children, variant, weight, color }) => {
   const className = classNames(styles[variant], styles[color], styles[weight]);
 
-  const TextComponent =
-    variant === "body" || variant === "body" ? "p" : variant;
+  const TextComponent = variant === "body" ? "p" : variant;
 
   return <TextComponent className={className}>{children}</TextComponent>;
 };
