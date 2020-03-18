@@ -4,15 +4,15 @@
   box-sizing: content-box;
   padding: 32px;
 
-  @include Breakpoint-desktopOnly {
+  @include breakpoint-desktopOnly {
     margin: 0 auto;
   }
 
-  @include Breakpoint-tabletOnly {
+  @include breakpoint-tabletOnly {
     margin: 0 auto;
   }
 
-  @include Breakpoint-mobileOnly {
+  @include breakpoint-mobileOnly {
     margin: 0 auto;
   }
 }
