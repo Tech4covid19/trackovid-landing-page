@@ -1,0 +1,67 @@
+{
+  "name": "trackovid",
+  "description": "Landing page for Trackovid project",
+  "version": "1.0.0",
+  "author": "Tech4covid19",
+  "homepage": "https://github.com/Tech4covid19/trackovid-landing-page",
+  "keywords": [
+    "gatsby",
+    "starter",
+    "postcss",
+    "modules",
+    "analytics",
+    "linters"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tech4covid19/trackovid-landing-page"
+  },
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "lint": "eslint src",
+    "lint-styles": "stylelint \"src/**/*.css\" \"src/**/*.scss\""
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-polyfill": "^6.26.0",
+    "classnames": "^2.2.6",
+    "core-js": "^3.6.4",
+    "eslint-plugin-prettier": "^3.1.2",
+    "gatsby": "^2.19.41",
+    "gatsby-image": "^2.2.43",
+    "gatsby-link": "^2.2.30",
+    "gatsby-plugin-google-analytics": "^2.1.37",
+    "gatsby-plugin-postcss": "^2.1.21",
+    "gatsby-plugin-react-helmet": "^3.1.23",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-sharp": "^2.4.12",
+    "gatsby-plugin-sitemap": "^2.2.29",
+    "gatsby-source-filesystem": "^2.1.54",
+    "gatsby-transformer-sharp": "^2.3.18",
+    "intersection-observer": "^0.7.0",
+    "postcss-import": "^12.0.1",
+    "precss": "^4.0.0",
+    "prop-types": "^15.7.2",
+    "raf": "^3.4.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.2.1",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-order": "^4.0.0"
+  }
+}
