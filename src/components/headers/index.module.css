@@ -1,7 +1,6 @@
 @import "../../styles/all.css";
 
 .root {
-
   background-color: white;
 
   h1 {
@@ -15,8 +14,7 @@
 }
 
 .link {
-  color: black !important;
   padding-left: 20px;
-
+  color: black !important;
   text-decoration: none !important;
 }

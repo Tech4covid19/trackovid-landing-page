@@ -5,8 +5,7 @@ module.exports = {
     siteUrl: "https://example.com",
     title: "Trackovid",
     author: "Tech4covid19",
-    description:
-      "Landing page for Trackovid project",
+    description: "Landing page for Trackovid project",
     keywords: "gatsby, starter, eslint, postcss, analytics",
   },
   plugins: [
@@ -30,9 +29,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-root-import",
+      resolve: "gatsby-plugin-alias-imports",
       options: {
-        root: path.join(__dirname, "src"),
+        alias: {
+          "@": path.join(__dirname, "src"),
+        },
+        extensions: ["js", "jsx", "css", "scss"],
       },
     },
     "gatsby-plugin-sitemap",

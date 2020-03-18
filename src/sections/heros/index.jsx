@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className={styles.root}>
       Acompanhe o seu estado de saúde durante o surto de Covid19 e veja
-        informação da sua área de residência.
+      informação da sua área de residência.
     </div>
   );
 };
