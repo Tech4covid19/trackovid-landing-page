@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,500,600,700&display=swap');
+
+$font-family: 'Archivo', sans-serif;
+
+$font-size-h1: 44px;
+$line-height-h1: 115%;
+$font-size-h2: 34px;
+$line-height-h2: 115%;
+$font-size-h3: 26px;
+$line-height-h3: 115%;
+$font-size-body: 20px;
+$line-height-body: 120%;
+
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+
+$font-size-h1-mobile: 26px;
+$font-size-h2-mobile: 24px;
+$font-size-h3-mobile: 18px;
+$font-size-body-mobile: 20px;
