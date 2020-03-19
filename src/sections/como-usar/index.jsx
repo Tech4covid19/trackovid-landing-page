@@ -9,7 +9,7 @@ import styles from "./index.module.css";
 
 const ComoUsar = () => {
   return (
-    <div className={styles.root}>
+    <div id="como-usar" className={styles.root}>
       <div className={styles.container}>
         <div>
           <Typography variant="h1" color="purple" weight="bold">

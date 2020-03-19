@@ -32,8 +32,8 @@ Typography.propTypes = {
     "gray",
     "darkGray",
     "purple",
-    "orange"
-  ),
+    "orange",
+  ]),
 };
 
 Typography.defaultProps = {
