@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import Layout from "@/components/layout";
 import Hero from "@/sections/hero";
 import Footer from "@/components/footer";
+import ParaQueServe from "@/sections/para-que-serve";
 
 const IndexPage = () => {
   return (
@@ -14,6 +15,7 @@ const IndexPage = () => {
 
       <Layout>
         <Hero />
+        <ParaQueServe />
       </Layout>
 
       <Footer />

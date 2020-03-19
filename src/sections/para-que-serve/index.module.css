@@ -1,0 +1,43 @@
+@import "../../styles/all.module.css";
+
+.root {
+  max-width: 1220px;
+  padding: 74px 0;
+  margin: 0 auto;
+  text-align: center;
+
+
+  @include breakpoint-mobile-only {
+    padding: 48px 36px;
+  }
+}
+
+.subtitle {
+  max-width: 676px;
+  margin: 21px auto 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60px 0;
+
+  .column {
+    max-width: 343px;
+    text-align: left;
+
+    @include breakpoint-mobile-only {
+      max-width: 100%;
+      margin: 0 auto 21px auto;
+      text-align: center;
+    }
+  }
+
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+  }
+
+
+}
