@@ -6,7 +6,7 @@ import styles from "./index.module.css";
 
 const ParaQueServe = () => {
   return (
-    <div className={styles.root}>
+    <div id="para-que-serve" className={styles.root}>
       <div>
         <Typography variant="h1" color="purple" weight="bold">
           Para que serve?

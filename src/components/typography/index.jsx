@@ -7,7 +7,7 @@ import styles from "./index.module.css";
 const Typography = ({ children, variant, weight, color }) => {
   const className = classNames(styles[variant], styles[color], styles[weight]);
 
-  const TextComponent = variant === "body" ? "p" : variant;
+  const TextComponent = ["h1", "h2", "h3"].includes(variant) ? variant : "p";
 
   return <TextComponent className={className}>{children}</TextComponent>;
 };
@@ -19,11 +19,20 @@ Typography.propTypes = {
     "h2",
     "h3",
     "body",
-    "medium-body",
-    "small-body",
+    "mediumBody",
+    "smallBody",
+    "smallCta",
+    "largeCta",
   ]),
   weight: PropTypes.oneOf(["regular", "medium", "bold"]),
-  color: PropTypes.oneOf(["white", "black", "gray", "darkGray", "purple"]),
+  color: PropTypes.oneOf(
+    "white",
+    "black",
+    "gray",
+    "darkGray",
+    "purple",
+    "orange"
+  ),
 };
 
 Typography.defaultProps = {
