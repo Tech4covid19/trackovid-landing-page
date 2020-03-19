@@ -6,9 +6,12 @@
   margin: 0 auto;
   text-align: center;
 
-
   @include breakpoint-mobile-only {
     padding: 48px 36px;
+  }
+
+  @include breakpoint-xs-only {
+    padding: 48px 0;
   }
 }
 
@@ -20,8 +23,8 @@
 .content {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  padding: 60px 0;
 
   .column {
     max-width: 343px;
@@ -36,5 +39,7 @@
 
   @include breakpoint-mobile-only {
     flex-direction: column;
+    align-items: stretch;
+    margin-top: 32px;
   }
 }

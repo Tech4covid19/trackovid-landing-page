@@ -1,5 +1,12 @@
+$breakpoint-xs: 480px;
 $breakpoint-mobile: 986px;
 $breakpoint-desktop: 1268px;
+
+@mixin breakpoint-xs-only {
+  @media screen and (width <= $breakpoint-xs) {
+    @content;
+  }
+}
 
 @mixin breakpoint-mobile-only {
   @media screen and (width <= $breakpoint-mobile) {
