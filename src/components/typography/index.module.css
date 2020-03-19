@@ -65,6 +65,11 @@
   line-height: $line-height-large-cta;
 }
 
+.number {
+  font-size: $font-size-number;
+  line-height: $line-height-number;
+}
+
 .regular {
   @extend %font-family;
 

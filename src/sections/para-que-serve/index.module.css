@@ -41,3 +41,7 @@
     margin-top: 32px;
   }
 }
+
+.link {
+  color: $gray;
+}

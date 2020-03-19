@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import Typography from "@/components/typography";
 import image from "@/assets/img-para-que-serve.svg";
 
@@ -34,8 +35,12 @@ const ParaQueServe = () => {
             É ainda permitido aos utilizadores da aplicação acompanhar, em tempo
             real, o impacto da pandameia na zona onde se encontram, com base nas
             actualizações enviadas por todos os utilizadores. A privacidade dos
-            dados recolhidos é tratada com o máximo cuidado. Leia os nossos
-            Termos & Condições.
+            dados recolhidos é tratada com o máximo cuidado. Leia os
+            nossos&nbsp;
+            <Link className={styles.link} to="/#termos-e-condicoes">
+              Termos &amp; Condições
+            </Link>
+            .
           </Typography>
         </div>
 

@@ -1,0 +1,70 @@
+@import "../../styles/all.module.css";
+
+.root {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(201, 212, 229, 1) 100%);
+}
+
+.container {
+  max-width: 1220px;
+  padding: 96px 0 84px 0;
+  margin: 0 auto;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    padding: 33px 36px 183px 36px;
+  }
+}
+
+.title {
+  margin: 21px auto 56px auto;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 56px;
+
+  .column {
+    .number {
+      display: flex;
+      align-items: center;
+      width: 43px;
+      height: 43px;
+      margin: 0 auto 16px auto;
+      background-color: $light-purple;
+      border-radius: 100%;
+
+      p {
+        margin: 0 auto;
+      }
+    }
+
+    .columnSubTitle {
+      max-width: 300px;
+      margin-top: 4px;
+    }
+
+    .imageContainer {
+      width: 270px;
+      margin: 40px auto 0 auto;
+
+    }
+
+    @include breakpoint-mobile-only {
+      max-width: 100%;
+      margin: 0 auto 21px auto;
+    }
+
+  }
+
+  @include breakpoint-desktop-only {
+    height: 800px;
+  }
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+  }
+}

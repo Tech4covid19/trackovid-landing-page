@@ -35,6 +35,7 @@ Typography.propTypes = {
     "smallBody",
     "smallCta",
     "largeCta",
+    "number",
   ]),
   weight: PropTypes.oneOf(["regular", "medium", "bold"]),
   color: PropTypes.oneOf([
