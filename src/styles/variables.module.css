@@ -51,9 +51,12 @@ $font-size-h3: 26px;
 $line-height-h3: 115%;
 $font-size-body: 20px;
 $line-height-body: 120%;
+$font-size-small-body: 14px;
+$line-height-small-body: 18px;
 
 $font-weight-regular: 400;
-$font-weight-medium: 600;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
 
 $font-size-h1-mobile: 26px;
 $font-size-h2-mobile: 24px;

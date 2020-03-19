@@ -1,12 +1,14 @@
+@import "../../styles/all.module.css";
+
 .footer {
+  @extend %font-family;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 140px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #63717e;
+  background-color: $white;
 }
 
 .image {
