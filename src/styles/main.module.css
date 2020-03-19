@@ -1,3 +1,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  background: radial-gradient(
+    86.23% 167.21% at 22.57% 9.51%,
+    rgba(107, 104, 252, 0.1) 0%,
+    rgba(251, 101, 1, 0.1) 100%
+  );
+}
