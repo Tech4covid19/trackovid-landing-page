@@ -63,7 +63,7 @@ const ComoUsar = () => {
             <Typography weight="bold">Veja os dados da sua área</Typography>
             <div className={styles.columnSubTitle}>
               <Typography color="gray" variant="mediumBody">
-                Acompanhe os dados da sua àrea de residência e mantenha-se
+                Acompanhe os dados da sua área de residência e mantenha-se
                 seguro.
               </Typography>
             </div>
