@@ -1,4 +1,4 @@
-@import "../../styles/all.css";
+@import "../../styles/all.module.css";
 
 .h1 {
   font-size: $font-size-h1;
