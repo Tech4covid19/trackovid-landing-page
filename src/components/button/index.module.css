@@ -1,0 +1,59 @@
+@import "../../styles/all.module.css";
+
+.root {
+  @extend %font-family;
+
+  display: inline-block;
+}
+
+.link {
+  padding: 0;
+  font-size: 14px;
+  font-weight: $font-weight-regular;
+  line-height: 18px;
+  color: $orange;
+  text-decoration: none;
+  background: transparent;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.outline {
+  padding: 8px 19px;
+  font-size: 13px;
+  font-weight: $font-weight-bold;
+  line-height: 14px;
+  color: $orange;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid $orange;
+  border-radius: 16px;
+  transition: all 0.18s ease;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    background: $orange;
+  }
+}
+
+.cta {
+  padding: 18px 40px;
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  line-height: 17px;
+  color: $white;
+  background: $orange;
+  border-radius: 27px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(250, 100, 0, 0.12),
+    0 10px 20px rgba(250, 100, 0, 0.18);
+  transition: all 0.18s ease;
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(250, 100, 0, 0.24),
+      0 10px 20px rgba(250, 100, 0, 0.3);
+  }
+}

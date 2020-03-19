@@ -8,6 +8,7 @@ module.exports = {
     author: "Tech4covid19",
     description: "Landing page for Trackovid project",
     keywords: "gatsby, starter, eslint, postcss, analytics",
+    appSiteUrl: "https://trackovid-app.com",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
