@@ -7,6 +7,8 @@ import Hero from "@/sections/hero";
 import Footer from "@/components/footer";
 import ParaQueServe from "@/sections/para-que-serve";
 
+import "@/styles/main.module.css";
+
 const IndexPage = () => {
   return (
     <div>

@@ -21,11 +21,15 @@ export default function Header() {
   return (
     <header className={styles.root}>
       <div className={styles.inner}>
-        <Link to="/" className={styles.link}>
-          Para que serve?
+        <Link to="#para-que-serve" className={styles.link}>
+          <Typography variant="smallCta" weight="bold">
+            Para que serve?
+          </Typography>
         </Link>
-        <Link to="/" className={styles.link}>
-          Como usar?
+        <Link to="#como-usar" className={styles.link}>
+          <Typography variant="smallCta" weight="bold">
+            Como usar?
+          </Typography>
         </Link>
         <Button href={data.site.siteMetadata.appSiteUrl} type="outline">
           <Typography variant="smallCta" weight="bold" color="orange">

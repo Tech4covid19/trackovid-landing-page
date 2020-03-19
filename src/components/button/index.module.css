@@ -26,10 +26,18 @@
   border-radius: 16px;
   transition: all 0.18s ease;
 
+  p {
+    transition: color 0.18s ease;
+  }
+
   &:hover {
     color: $white;
     text-decoration: none;
     background: $orange;
+
+    p {
+      color: $white;
+    }
   }
 }
 
