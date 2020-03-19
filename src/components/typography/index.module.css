@@ -1,4 +1,4 @@
-@import "../../styles/all.css";
+@import "../../styles/all.module.css";
 
 .h1 {
   font-size: $font-size-h1;
@@ -36,6 +36,11 @@
   }
 }
 
+.small-body {
+  font-size: $font-size-small-body;
+  line-height: $line-height-small-body;
+}
+
 .regular {
   @extend %font-family;
 
@@ -48,6 +53,12 @@
   font-weight: $font-weight-medium;
 }
 
+.bold {
+  @extend %font-family;
+
+  font-weight: $font-weight-bold;
+}
+
 .white {
   color: $white;
 }
@@ -58,4 +69,8 @@
 
 .gray {
   color: $gray;
+}
+
+.dark-gray {
+  color: $dark-gray;
 }
