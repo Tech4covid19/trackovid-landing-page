@@ -4,6 +4,7 @@ import SEO from "@/components/seo";
 import Header from "@/components/header";
 import Layout from "@/components/layout";
 import Hero from "@/sections/hero";
+import Footer from "@/components/footer";
 
 const IndexPage = () => {
   return (
@@ -14,6 +15,8 @@ const IndexPage = () => {
       <Layout>
         <Hero />
       </Layout>
+
+      <Footer />
     </div>
   );
 };

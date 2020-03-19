@@ -29,10 +29,16 @@ const Hero = () => {
         sua área de residência.
       </Typography>
       <Button href={data.site.siteMetadata.appSiteUrl} type="cta">
-        Começar a usar
+        <Typography variant="largeCta" color="white" weight="bold">
+          Começar a usar
+        </Typography>
       </Button>
       <br />
-      <Button href="/#saber-mais">Saber mais</Button>
+      <Button href="/#saber-mais">
+        <Typography variant="smallBody" color="orange">
+          Saber mais
+        </Typography>
+      </Button>
     </div>
   );
 };

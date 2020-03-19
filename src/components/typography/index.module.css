@@ -36,6 +36,21 @@
   }
 }
 
+.small-body {
+  font-size: $font-size-small-body;
+  line-height: $line-height-small-body;
+}
+
+.small-cta {
+  font-size: $font-size-small-cta;
+  line-height: $line-height-small-cta;
+}
+
+.large-cta {
+  font-size: $font-size-large-cta;
+  line-height: $line-height-large-cta;
+}
+
 .regular {
   @extend %font-family;
 
@@ -48,6 +63,12 @@
   font-weight: $font-weight-medium;
 }
 
+.bold {
+  @extend %font-family;
+
+  font-weight: $font-weight-bold;
+}
+
 .white {
   color: $white;
 }
@@ -58,4 +79,12 @@
 
 .gray {
   color: $gray;
+}
+
+.dark-gray {
+  color: $dark-gray;
+}
+
+.orange {
+  color: $orange;
 }

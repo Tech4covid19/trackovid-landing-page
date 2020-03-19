@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Link from "gatsby-link";
 import Button from "@/components/button";
+import Typography from "@/components/typography";
 
 import styles from "./index.module.css";
 
@@ -27,7 +28,9 @@ export default function Header() {
           Como usar?
         </Link>
         <Button href={data.site.siteMetadata.appSiteUrl} type="outline">
-          Login
+          <Typography variant="smallCta" weight="bold" color="orange">
+            Login
+          </Typography>
         </Button>
       </div>
     </header>
