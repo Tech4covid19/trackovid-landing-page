@@ -14,9 +14,16 @@ const Typography = ({ children, variant, weight, color }) => {
 
 Typography.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(["h1", "h2", "h3", "body", "small-body"]),
+  variant: PropTypes.oneOf([
+    "h1",
+    "h2",
+    "h3",
+    "body",
+    "medium-body",
+    "small-body",
+  ]),
   weight: PropTypes.oneOf(["regular", "medium", "bold"]),
-  color: PropTypes.oneOf(["white", "black", "gray", "dark-gray"]),
+  color: PropTypes.oneOf(["white", "black", "gray", "darkGray", "purple"]),
 };
 
 Typography.defaultProps = {
