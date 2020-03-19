@@ -2,7 +2,6 @@
 
 .root {
   box-sizing: content-box;
-  padding: 32px;
 
   @include breakpoint-desktop-only {
     margin: 0 auto;
