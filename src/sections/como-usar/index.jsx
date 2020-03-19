@@ -1,4 +1,5 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import Typography from "@/components/typography";
 import image from "@/assets/como-usar1.svg";
 import image2 from "@/assets/como-usar2.svg";
@@ -7,7 +8,18 @@ import Button from "@/components/button";
 
 import styles from "./index.module.css";
 
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        appSiteUrl
+      }
+    }
+  }
+`;
+
 const ComoUsar = () => {
+  const data = useStaticQuery(query);
   return (
     <div id="como-usar" className={styles.root}>
       <div className={styles.container}>
@@ -73,7 +85,7 @@ const ComoUsar = () => {
             </div>
           </div>
         </div>
-        <Button type="cta">
+        <Button href={data.site.siteMetadata.appSiteUrl} type="cta">
           <Typography variant="largeCta" color="white" weight="bold">
             Começa a usar
           </Typography>

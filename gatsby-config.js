@@ -4,11 +4,14 @@ module.exports = {
   pathPrefix: "/trackovid-landing-page",
   siteMetadata: {
     siteUrl: "https://example.com",
-    title: "Trackovid",
+    title: "Covidografia",
     author: "Tech4covid19",
-    description: "Landing page for Trackovid project",
-    keywords: "gatsby, starter, eslint, postcss, analytics",
+    description:
+      "A app que tira uma fotografia instantânea dos sintomas dos portugueses",
+    keywords: "COVID-19, Coronavírus, app, fotografia, sintomas, portugueses",
     appSiteUrl: "https://trackovid-app.com",
+    logo: "/images/logo.png",
+    ogImage: "/images/covidografia-share.png",
   },
   plugins: [
     "gatsby-plugin-react-helmet",

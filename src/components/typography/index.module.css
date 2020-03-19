@@ -46,6 +46,15 @@
   line-height: $line-height-small-body;
 }
 
+.body,
+.medium-body,
+.small-body {
+  strong,
+  b {
+    font-weight: $font-weight-bold;
+  }
+}
+
 .small-cta {
   font-size: $font-size-small-cta;
   line-height: $line-height-small-cta;
@@ -101,8 +110,4 @@
 
 .orange {
   color: $orange;
-}
-
-.purple {
-  color: $purple;
 }

@@ -1,5 +1,145 @@
 @import "../../styles/all.module.css";
 
 .root {
-  /* root hero styles */
+  padding-top: 132px;
+  background: radial-gradient(
+    86.23% 167.21% at 22.7% 9.25%,
+    rgba(107, 104, 252, 0.1) 0%,
+    rgba(251, 101, 1, 0.1) 100%
+  );
+
+  @include breakpoint-mobile-only {
+    padding-top: 109px;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1172px;
+  padding: 0 24px;
+  margin: 0 auto;
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+    padding: 0 36px;
+  }
+}
+
+.column {
+  flex: 1;
+
+  &:first-child {
+    z-index: 2;
+    max-width: 535px;
+  }
+
+  &:last-child {
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+.column-body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 532px;
+
+  .image-wrapper {
+    width: 100%;
+
+    @include breakpoint-mobile-only {
+      min-width: 400px;
+      margin-top: -60px;
+    }
+
+    @include breakpoint-xs-only {
+      min-width: 400px;
+      margin-top: -20px;
+    }
+  }
+}
+
+.logo {
+  max-width: 314px;
+
+  @include breakpoint-xs-only {
+    max-width: 214px;
+  }
+}
+
+.typography {
+  margin-top: 32px;
+  letter-spacing: -0.5px;
+
+  &:nth-child(3) {
+    @include breakpoint-mobile-only {
+      margin-top: 16px;
+    }
+  }
+}
+
+.info,
+.more {
+  @include breakpoint-tablet-and-above {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.info {
+  margin-top: 80px;
+  margin-bottom: 50px;
+
+  @include breakpoint-desktop-only {
+    display: flex;
+    align-items: center;
+  }
+
+  @include breakpoint-mobile-only {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 250px;
+    padding-right: 30%;
+    padding-bottom: 20px;
+    padding-left: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: linear-gradient(20deg, $white 18%, rgba(255, 255, 255, 0) 65%);
+
+    p {
+      display: inline;
+    }
+  }
+
+  @include breakpoint-xs-only {
+    background: linear-gradient(24deg, $white 18%, rgba(255, 255, 255, 0) 65%);
+  }
+}
+
+.more {
+  display: inline-flex !important;
+  align-items: center;
+  margin-left: 6px;
+
+  @include breakpoint-mobile-only {
+    margin-top: 3px;
+    margin-left: 0;
+  }
+
+  img {
+    padding-bottom: 2px;
+    margin-left: 4px;
+  }
 }
