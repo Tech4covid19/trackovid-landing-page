@@ -1,9 +1,22 @@
 import React from "react";
 import Typography from "@/components/typography";
+import { useStaticQuery, graphql } from "gatsby";
+import Button from "@/components/button";
 
 import styles from "./index.module.css";
 
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        appSiteUrl
+      }
+    }
+  }
+`;
+
 const Hero = () => {
+  const data = useStaticQuery(query);
   return (
     <div className={styles.root}>
       <Typography variant="h2">
@@ -15,6 +28,17 @@ const Hero = () => {
         seu estado durante o surto de COVID-19. Veja a evolução da pandemia na
         sua área de residência.
       </Typography>
+      <Button href={data.site.siteMetadata.appSiteUrl} type="cta">
+        <Typography variant="largeCta" color="white" weight="bold">
+          Começar a usar
+        </Typography>
+      </Button>
+      <br />
+      <Button href="/#saber-mais">
+        <Typography variant="smallBody" color="orange">
+          Saber mais
+        </Typography>
+      </Button>
     </div>
   );
 };

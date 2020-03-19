@@ -55,6 +55,10 @@ $font-size-medium-body: 16px;
 $line-height-medium-body: 22px;
 $font-size-small-body: 14px;
 $line-height-small-body: 18px;
+$font-size-small-cta: 13px;
+$line-height-small-cta: 14px;
+$font-size-large-cta: 16px;
+$line-height-large-cta: 17px;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;

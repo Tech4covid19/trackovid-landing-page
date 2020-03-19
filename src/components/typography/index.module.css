@@ -46,6 +46,16 @@
   line-height: $line-height-small-body;
 }
 
+.small-cta {
+  font-size: $font-size-small-cta;
+  line-height: $line-height-small-cta;
+}
+
+.large-cta {
+  font-size: $font-size-large-cta;
+  line-height: $line-height-large-cta;
+}
+
 .regular {
   @extend %font-family;
 
@@ -82,4 +92,8 @@
 
 .purple {
   color: $purple;
+}
+
+.orange {
+  color: $orange;
 }
