@@ -20,7 +20,7 @@ const ParaQueServe = () => {
       </div>
       <div className={styles.content}>
         <div className={styles.column}>
-          <Typography color="gray" variant="mediumBody">
+          <Typography color="gray" variant="mediumBody" weight="medium">
             Este serviço permite aos cidadão portugueses indicarem, de forma
             regular, quais os seus sintomas, em particular aqueles que estão
             associados ao COVID-19. Esta informação será agregada e passada às
@@ -30,7 +30,7 @@ const ParaQueServe = () => {
           </Typography>
         </div>
         <div className={styles.column}>
-          <Typography color="gray" variant="mediumBody">
+          <Typography color="gray" variant="mediumBody" weight="medium">
             É ainda permitido aos utilizadores da aplicação acompanhar, em tempo
             real, o impacto da pandameia na zona onde se encontram, com base nas
             actualizações enviadas por todos os utilizadores. A privacidade dos

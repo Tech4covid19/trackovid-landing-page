@@ -11,17 +11,13 @@ import "@/styles/main.module.css";
 
 const IndexPage = () => {
   return (
-    <div>
-      <SEO title="Home Page" />
+    <Layout>
+      <SEO />
       <Header />
-
-      <Layout>
-        <Hero />
-        <ParaQueServe />
-      </Layout>
-
+      <Hero />
+      <ParaQueServe />
       <Footer />
-    </div>
+    </Layout>
   );
 };
 

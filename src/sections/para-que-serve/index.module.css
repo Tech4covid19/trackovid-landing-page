@@ -2,16 +2,12 @@
 
 .root {
   max-width: 1220px;
-  padding: 74px 0;
+  padding: 74px 24px;
   margin: 0 auto;
   text-align: center;
 
   @include breakpoint-mobile-only {
     padding: 48px 36px;
-  }
-
-  @include breakpoint-xs-only {
-    padding: 48px 0;
   }
 }
 
@@ -28,10 +24,12 @@
 
   .column {
     max-width: 343px;
+    padding-right: 24px;
     text-align: left;
 
     @include breakpoint-mobile-only {
       max-width: 100%;
+      padding-right: 0;
       margin: 0 auto 21px auto;
       text-align: center;
     }

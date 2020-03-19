@@ -1,8 +1,9 @@
 @import "../../styles/all.module.css";
 
 .root {
+  position: relative;
   box-sizing: content-box;
-  padding: 32px;
+  width: 100%;
 
   @include breakpoint-desktop-only {
     margin: 0 auto;

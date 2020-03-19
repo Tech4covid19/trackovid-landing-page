@@ -4,8 +4,19 @@ import classNames from "classnames";
 
 import styles from "./index.module.css";
 
-const Typography = ({ children, variant, weight, color }) => {
-  const className = classNames(styles[variant], styles[color], styles[weight]);
+const Typography = ({
+  children,
+  variant,
+  weight,
+  color,
+  className: otherClass,
+}) => {
+  const className = classNames(
+    styles[variant],
+    styles[color],
+    styles[weight],
+    otherClass
+  );
 
   const TextComponent = ["h1", "h2", "h3"].includes(variant) ? variant : "p";
 
@@ -14,6 +25,7 @@ const Typography = ({ children, variant, weight, color }) => {
 
 Typography.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   variant: PropTypes.oneOf([
     "h1",
     "h2",
@@ -25,18 +37,19 @@ Typography.propTypes = {
     "largeCta",
   ]),
   weight: PropTypes.oneOf(["regular", "medium", "bold"]),
-  color: PropTypes.oneOf(
+  color: PropTypes.oneOf([
     "white",
     "black",
     "gray",
     "darkGray",
     "purple",
-    "orange"
-  ),
+    "orange",
+  ]),
 };
 
 Typography.defaultProps = {
   variant: "body",
+  className: null,
   weight: "regular",
   color: "black",
 };
