@@ -10,6 +10,8 @@ module.exports = {
       "A app que tira uma fotografia instantânea dos sintomas dos portugueses",
     keywords: "COVID-19, Coronavírus, app, fotografia, sintomas, portugueses",
     appSiteUrl: "https://trackovid-app.com",
+    logo: "/images/logo.png",
+    ogImage: "/images/covidografia-share.png",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
