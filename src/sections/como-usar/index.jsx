@@ -37,7 +37,7 @@ const ComoUsar = () => {
             </div>
             <Typography weight="bold">Registe-se na plataforma</Typography>
             <div className={styles.columnSubTitle}>
-              <Typography color="gray" variant="mediumBody">
+              <Typography color="gray" variant="mediumBody" weight="medium">
                 Use a sua conta de Facebook para se registar. Mais opções de
                 login em breve.
               </Typography>
@@ -57,7 +57,7 @@ const ComoUsar = () => {
               Atualize o seu estado de saúde
             </Typography>
             <div className={styles.columnSubTitle}>
-              <Typography color="gray" variant="mediumBody">
+              <Typography color="gray" variant="mediumBody" weight="medium">
                 Responda a algumas questões sobre sintomas, isolamento, etc
               </Typography>
             </div>
@@ -74,7 +74,7 @@ const ComoUsar = () => {
             </div>
             <Typography weight="bold">Veja os dados da sua área</Typography>
             <div className={styles.columnSubTitle}>
-              <Typography color="gray" variant="mediumBody">
+              <Typography color="gray" variant="mediumBody" weight="medium">
                 Acompanhe os dados da sua área de residência e mantenha-se
                 seguro.
               </Typography>

@@ -2,12 +2,26 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import classNames from "classnames";
+import { useStaticQuery, graphql } from "gatsby";
 
 import styles from "./index.module.css";
 
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+  }
+`;
+
 function Button({ children, href, type, className: otherClass }) {
+  const data = useStaticQuery(query);
+
   if (href) {
     const isInternalLink = href.startsWith("/");
+    const isSameDomain = href.startsWith(data.site.siteMetadata.siteUrl);
     const className = classNames(
       styles.root,
       styles.link,
@@ -20,7 +34,14 @@ function Button({ children, href, type, className: otherClass }) {
         {children}
       </Link>
     ) : (
-      <a href={href} className={className}>
+      <a
+        href={href}
+        className={className}
+        {...(!isSameDomain && {
+          target: "_blank",
+          rel: "noopener noreferrer",
+        })}
+      >
         {children}
       </a>
     );

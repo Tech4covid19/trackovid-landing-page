@@ -8,7 +8,9 @@ const query = graphql`
   query {
     site {
       siteMetadata {
+        siteUrl
         title
+        author
         description
         keywords
         logo
@@ -21,6 +23,8 @@ const query = graphql`
 function SEO({ title, description, keywords }) {
   const data = useStaticQuery(query);
   const {
+    siteUrl,
+    author,
     title: siteTitle,
     description: siteDescription,
     keywords: siteKeywords,
@@ -35,12 +39,14 @@ function SEO({ title, description, keywords }) {
       <meta name="keywords" content={keywords || siteKeywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" type="image/png" href={logo} />
+      <meta name="language" content="pt-pt" />
+      <meta name="author" content={author} />
       <meta property="og:title" content={title || siteTitle} />
       <meta
         property="og:description"
         content={description || siteDescription}
       />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={siteUrl + ogImage} />
     </Helmet>
   );
 }
