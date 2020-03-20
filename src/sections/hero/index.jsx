@@ -38,6 +38,7 @@ const Hero = () => {
             src={logo}
             alt={data.site.siteMetadata.title}
             className={styles.logo}
+            title={data.site.siteMetadata.title}
           />
           <Typography variant="h2" weight="bold" className={styles.typography}>
             {data.site.siteMetadata.description}

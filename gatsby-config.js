@@ -5,14 +5,12 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://covidografia.pt",
     title: "Covidografia",
-    author: "Tech4covid19",
+    author: "Tech4Covid19",
     authorUrl: "https://tech4covid19.org",
     description:
       "A app que tira uma fotografia instantânea dos sintomas dos portugueses",
     keywords: "COVID-19, Coronavírus, app, fotografia, sintomas, portugueses",
     appSiteUrl: "https://covidografia.pt/app",
-    logo: "/images/logo.png",
-    ogImage: "/images/covidografia-share.png",
   },
   plugins: [
     "gatsby-plugin-react-helmet",

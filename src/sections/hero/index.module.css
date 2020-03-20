@@ -82,6 +82,13 @@
       margin-top: 16px;
     }
   }
+
+  &:nth-child(4) {
+    @include breakpoint-xs-only {
+      display: block;
+      text-align: center;
+    }
+  }
 }
 
 .info,

@@ -3,16 +3,63 @@
 .footer {
   @extend %font-family;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 140px;
+  padding: 32px 0;
   background-color: $white;
 }
 
-.image {
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+
+  .row:last-child {
+    margin-left: 16px;
+  }
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+
+    .row:last-child {
+      margin-top: 8px;
+      margin-left: 0;
+    }
+  }
+}
+
+.email {
+  width: 12px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.emailLink {
+  color: $dark-gray;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.heart {
   width: 14px;
   height: 14px;
+  margin: 0 4px;
+}
+
+.authorLink {
+  height: 22px;
+}
+
+.tech4covid19 {
+  width: 103px;
+  height: 22px;
   margin: 0 4px;
 }
