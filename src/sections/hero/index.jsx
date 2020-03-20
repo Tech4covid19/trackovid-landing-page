@@ -15,9 +15,10 @@ const query = graphql`
         title
         description
         appSiteUrl
+        authorUrl
       }
     }
-    file(relativePath: { eq: "hero-image.png" }) {
+    file(relativePath: { eq: "hero-app-image.png" }) {
       childImageSharp {
         fluid(maxWidth: 532, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -48,7 +49,7 @@ const Hero = () => {
             className={styles.typography}
           >
             A sua ajuda é fundamental para as autoridades de saúde acompanharem
-            o seu estado durante o surto de COVID-19. Veja a evolução da
+            os seus sintomas durante o surto de COVID-19. Veja a evolução da
             pandemia na sua área de residência.
           </Typography>
           <Button
@@ -65,7 +66,11 @@ const Hero = () => {
               <strong>#tech4covid</strong> Um projeto de voluntários, sem fins
               lucrativos.
             </Typography>
-            <Button href="/#saber-mais">
+            <Button
+              href={data.site.siteMetadata.authorUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Typography
                 variant="smallBody"
                 color="orange"
@@ -81,6 +86,7 @@ const Hero = () => {
             <Img
               fluid={data.file.childImageSharp.fluid}
               className={styles.imageWrapper}
+              alt={`${data.site.siteMetadata.title} app`}
             />
           </div>
         </div>

@@ -3,13 +3,14 @@ const path = require("path");
 module.exports = {
   pathPrefix: "/trackovid-landing-page",
   siteMetadata: {
-    siteUrl: "https://example.com",
+    siteUrl: "https://covidografia.pt",
     title: "Covidografia",
     author: "Tech4covid19",
+    authorUrl: "https://tech4covid19.org",
     description:
       "A app que tira uma fotografia instantânea dos sintomas dos portugueses",
     keywords: "COVID-19, Coronavírus, app, fotografia, sintomas, portugueses",
-    appSiteUrl: "https://trackovid-app.com",
+    appSiteUrl: "https://covidografia.pt/app",
     logo: "/images/logo.png",
     ogImage: "/images/covidografia-share.png",
   },

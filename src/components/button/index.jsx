@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 import styles from "./index.module.css";
 
-function Button({ children, href, type, className: otherClass }) {
+function Button({ children, href, type, className: otherClass, ...props }) {
   if (href) {
     const isInternalLink = href.startsWith("/");
     const className = classNames(
@@ -20,7 +20,7 @@ function Button({ children, href, type, className: otherClass }) {
         {children}
       </Link>
     ) : (
-      <a href={href} className={className}>
+      <a href={href} className={className} {...props}>
         {children}
       </a>
     );
