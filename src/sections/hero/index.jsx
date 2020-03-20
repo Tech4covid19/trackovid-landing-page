@@ -66,11 +66,7 @@ const Hero = () => {
               <strong>#tech4covid</strong> Um projeto de voluntários, sem fins
               lucrativos.
             </Typography>
-            <Button
-              href={data.site.siteMetadata.authorUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Button href={data.site.siteMetadata.authorUrl}>
               <Typography
                 variant="smallBody"
                 color="orange"
