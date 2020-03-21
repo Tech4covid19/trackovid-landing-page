@@ -20,7 +20,7 @@ const query = graphql`
     }
     file(relativePath: { eq: "hero-app-image.png" }) {
       childImageSharp {
-        fluid(maxWidth: 532, quality: 100) {
+        fluid(maxWidth: 532, quality: 80) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -38,7 +38,6 @@ const Hero = () => {
             src={logo}
             alt={data.site.siteMetadata.title}
             className={styles.logo}
-            title={data.site.siteMetadata.title}
           />
           <Typography variant="h2" weight="bold" className={styles.typography}>
             {data.site.siteMetadata.description}

@@ -59,9 +59,12 @@
     }
 
     .imageContainer {
-      display: flex;
-      justify-content: center;
       margin: 40px auto 0 auto;
+
+      .image {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     @include breakpoint-mobile-only {
