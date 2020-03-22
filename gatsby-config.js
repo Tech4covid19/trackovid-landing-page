@@ -10,7 +10,7 @@ module.exports = {
     description:
       "A app que tira uma fotografia instantânea dos sintomas dos portugueses",
     keywords: "COVID-19, Coronavírus, app, fotografia, sintomas, portugueses",
-    appSiteUrl: "https://covidografia.pt/app",
+    appSiteUrl: "https://app.covidografia.pt",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
