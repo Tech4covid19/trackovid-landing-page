@@ -21,7 +21,12 @@ function Button({ children, href, type, className: otherClass }) {
 
   if (href) {
     const isInternalLink = href.startsWith("/");
-    const isSameDomain = href.startsWith(data.site.siteMetadata.siteUrl);
+    let isSameDomain = false;
+    if (!isInternalLink) {
+      const siteLocation = new URL(data.site.siteMetadata.siteUrl);
+      const linkLocation = new URL(href);
+      isSameDomain = linkLocation.host.includes(siteLocation.host);
+    }
     const className = classNames(
       styles.root,
       styles.link,
