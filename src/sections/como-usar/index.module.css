@@ -3,11 +3,8 @@
 .root {
   width: 100%;
   background: rgb(255, 255, 255);
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(201, 212, 229, 1) 100%
-  );
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(229, 235, 243, 1) 100%);
+
 }
 
 .container {
@@ -59,9 +56,12 @@
     }
 
     .imageContainer {
-      display: flex;
-      justify-content: center;
       margin: 40px auto 0 auto;
+
+      .image {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     @include breakpoint-mobile-only {

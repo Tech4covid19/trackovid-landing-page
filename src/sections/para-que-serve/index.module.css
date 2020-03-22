@@ -14,6 +14,11 @@
 .subtitle {
   max-width: 676px;
   margin: 21px auto 0 auto;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    text-align: left;
+  }
 }
 
 .content {
@@ -31,7 +36,6 @@
       max-width: 100%;
       padding-right: 0;
       margin: 0 auto 21px auto;
-      text-align: center;
     }
   }
 
