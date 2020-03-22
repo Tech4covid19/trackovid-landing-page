@@ -13,8 +13,6 @@ const query = graphql`
         author
         description
         keywords
-        logo
-        ogImage
       }
     }
   }
@@ -28,8 +26,6 @@ function SEO({ title, description, keywords }) {
     title: siteTitle,
     description: siteDescription,
     keywords: siteKeywords,
-    logo,
-    ogImage,
   } = data.site.siteMetadata;
 
   return (
@@ -38,7 +34,8 @@ function SEO({ title, description, keywords }) {
       <meta name="description" content={description || siteDescription} />
       <meta name="keywords" content={keywords || siteKeywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" type="image/png" href={logo} />
+      <link rel="icon" type="image/png" href="favicon.png" />
+      <link rel="icon" type="image/x-icon" href="favicon.ico" />
       <meta name="language" content="pt-pt" />
       <meta name="author" content={author} />
       <meta property="og:title" content={title || siteTitle} />
@@ -46,7 +43,10 @@ function SEO({ title, description, keywords }) {
         property="og:description"
         content={description || siteDescription}
       />
-      <meta property="og:image" content={siteUrl + ogImage} />
+      <meta
+        property="og:image"
+        content={`${siteUrl}/images/covidografia-share.png`}
+      />
     </Helmet>
   );
 }

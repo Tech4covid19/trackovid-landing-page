@@ -20,7 +20,7 @@ const query = graphql`
     }
     file(relativePath: { eq: "hero-app-image.png" }) {
       childImageSharp {
-        fluid(maxWidth: 532, quality: 100) {
+        fluid(maxWidth: 532, quality: 80) {
           ...GatsbyImageSharpFluid
         }
       }

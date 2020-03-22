@@ -1,9 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import Typography from "@/components/typography";
-import image from "@/assets/como-usar1.svg";
-import image2 from "@/assets/como-usar2.svg";
-import image3 from "@/assets/como-usar3.svg";
 import Button from "@/components/button";
 
 import styles from "./index.module.css";
@@ -13,6 +11,22 @@ const query = graphql`
     site {
       siteMetadata {
         appSiteUrl
+      }
+    }
+    imageOne: file(relativePath: { eq: "como-usar1.png" }) {
+      ...ComoUsarImageData
+    }
+    imageTwo: file(relativePath: { eq: "como-usar2.png" }) {
+      ...ComoUsarImageData
+    }
+    imageThree: file(relativePath: { eq: "como-usar3.png" }) {
+      ...ComoUsarImageData
+    }
+  }
+  fragment ComoUsarImageData on File {
+    childImageSharp {
+      fixed(width: 326, quality: 80) {
+        ...GatsbyImageSharpFixed
       }
     }
   }
@@ -44,7 +58,11 @@ const ComoUsar = () => {
             </div>
 
             <div className={styles.imageContainer}>
-              <img src={image} alt="App login" />
+              <Img
+                className={styles.image}
+                fixed={data.imageOne.childImageSharp.fixed}
+                alt="Registe-se na plataforma"
+              />
             </div>
           </div>
           <div className={styles.column}>
@@ -63,7 +81,11 @@ const ComoUsar = () => {
             </div>
 
             <div className={styles.imageContainer}>
-              <img src={image2} alt="App status" />
+              <Img
+                className={styles.image}
+                fixed={data.imageTwo.childImageSharp.fixed}
+                alt="Atualize o seu estado de saúde"
+              />
             </div>
           </div>
           <div className={styles.column}>
@@ -81,7 +103,11 @@ const ComoUsar = () => {
             </div>
 
             <div className={styles.imageContainer}>
-              <img src={image3} alt="App data" />
+              <Img
+                className={styles.image}
+                fixed={data.imageThree.childImageSharp.fixed}
+                alt="Veja os dados da sua área"
+              />
             </div>
           </div>
         </div>
