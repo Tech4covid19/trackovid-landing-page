@@ -9,7 +9,7 @@ const query = graphql`
   query {
     site {
       siteMetadata {
-        siteUrl
+        appSiteUrl
       }
     }
   }
@@ -56,7 +56,7 @@ const ParaQueServe = () => {
             cuidado. Leia os nossos{" "}
             <a
               className={styles.link}
-              href={`${data.site.siteMetadata.siteUrl}/terms-conditions`}
+              href={`${data.site.siteMetadata.appSiteUrl}/#/terms-conditions`}
             >
               Termos &amp; Condições
             </a>

@@ -5611,10 +5611,10 @@ gatsby-plugin-alias-imports@1.0.5:
   dependencies:
     "@babel/runtime" "^7.2.0"
 
-gatsby-plugin-google-analytics@2.2.0:
+gatsby-plugin-google-tagmanager@2.2.0:
   version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.2.0.tgz#8ba9994607bdc2d57feec4401002038fb261e29c"
-  integrity sha512-mEX+hjNatObDBN32OkEdfmatpFOl3hs1fHDY8e7kVA9wsQdP2FL/wSwaxX15RuSOEUryyZ2aJMh8O/5iz2Pi1g==
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.2.0.tgz#efd3505e56e62187421cac51123b23d6bfd91369"
+  integrity sha512-gdiv7PEZDvc6FZuZY9Qtyb7bM+c7ZJXgyVrmcyJXfjjykULkAANi++0o4u4lwnD0vGgO8Ufzij2yxo3pBkHbqw==
   dependencies:
     "@babel/runtime" "^7.8.7"
 
