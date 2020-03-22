@@ -39,9 +39,10 @@ const ParaQueServe = () => {
               encontram
             </strong>
             , com base nas actualizações enviadas por todos os utilizadores.
-            <br />É ainda permitido aos cidadão portugueses indicarem, de forma
-            regular, quais os seus sintomas, em particular aqueles que estão
-            associados ao COVID-19.
+            <br />
+            <br />É ainda permitido aos cidadãos indicarem, de forma regular,
+            quais os seus sintomas, em particular aqueles que estão associados
+            ao COVID-19.
           </Typography>
         </div>
         <div className={styles.column}>
@@ -49,8 +50,10 @@ const ParaQueServe = () => {
             Esta informação será agregada e partilhada com as autoridades
             competentes que poderão depois dispor de informação importante para
             tomarem as melhores decisões para o proteger e ajudar o país a
-            recuperar do impacto desta pandemia. A privacidade dos dados
-            recolhidos é tratada com o máximo cuidado. Leia os nossos{" "}
+            recuperar do impacto desta pandemia.
+            <br />
+            <br />A privacidade dos dados recolhidos é tratada com o máximo
+            cuidado. Leia os nossos{" "}
             <a
               className={styles.link}
               href={`${data.site.siteMetadata.siteUrl}/terms-conditions`}
