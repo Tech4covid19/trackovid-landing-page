@@ -19,7 +19,7 @@ const query = graphql`
 `;
 
 const useWindowScroll = () => {
-  const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(window.scrollY);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
