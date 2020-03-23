@@ -66,10 +66,11 @@
 }
 
 .logo {
-  max-width: 314px;
+  width: auto;
+  height: 80px;
 
   @include breakpoint-xs-only {
-    max-width: 214px;
+    height: 54px;
   }
 }
 
