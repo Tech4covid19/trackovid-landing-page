@@ -19,11 +19,13 @@ const query = graphql`
 `;
 
 const useWindowScroll = () => {
-  const [scrollY, setScrollY] = useState(window.scrollY);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll, { passive: true });
+
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll, { passive: true });
