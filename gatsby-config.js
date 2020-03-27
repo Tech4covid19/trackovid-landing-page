@@ -7,9 +7,8 @@ module.exports = {
     title: "Covidografia",
     author: "Tech4Covid19",
     authorUrl: "https://tech4covid19.org",
-    description:
-      "A app que tira uma fotografia instantânea dos sintomas dos portugueses",
-    keywords: "COVID-19, Coronavírus, app, fotografia, sintomas, portugueses",
+    description: "A plataforma que tira uma fotografia instantânea dos sintomas dos portugueses",
+    keywords: "COVID-19, Coronavírus, app, plataforma, fotografia, sintomas, portugueses",
     appSiteUrl: "https://app.covidografia.pt",
   },
   plugins: [
@@ -34,7 +33,9 @@ module.exports = {
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
+        defaultDataLayer: {
+          platform: "gatsby"
+        },
       },
     },
     {
