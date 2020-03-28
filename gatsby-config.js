@@ -8,8 +8,9 @@ module.exports = {
     author: "Tech4Covid19",
     authorUrl: "https://tech4covid19.org",
     description:
-      "A app que tira uma fotografia instantânea dos sintomas dos portugueses",
-    keywords: "COVID-19, Coronavírus, app, fotografia, sintomas, portugueses",
+      "A plataforma que tira uma fotografia instantânea aos sintomas dos portugueses",
+    keywords:
+      "COVID-19, Coronavírus, app, plataforma, fotografia, sintomas, portugueses",
     appSiteUrl: "https://app.covidografia.pt",
   },
   plugins: [
