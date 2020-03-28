@@ -76,7 +76,7 @@ const ComoUsar = () => {
             </Typography>
             <div className={styles.columnSubTitle}>
               <Typography color="gray" variant="mediumBody" weight="medium">
-                Responda a algumas questões sobre sintomas, isolamento, etc
+                Responda a algumas questões sobre sintomas, isolamento, etc.
               </Typography>
             </div>
 
