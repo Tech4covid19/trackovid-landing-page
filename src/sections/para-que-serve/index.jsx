@@ -26,31 +26,31 @@ const ParaQueServe = () => {
       </div>
       <div className={styles.subtitle}>
         <Typography weight="bold">
-          O Covidografia recolhe informação, em tempo real, sobre os sintomas
-          dos portugueses para ajudar as autoridades de saúde
+          A Covidografia reúne informação, em tempo real, sobre os sintomas dos
+          portugueses para melhor se avaliar a propagação da pandemia
         </Typography>
       </div>
       <div className={styles.content}>
         <div className={styles.column}>
           <Typography color="gray" variant="mediumBody" weight="medium">
-            Este serviço permite aos utilizadores da aplicação{" "}
+            Esta recolha permite aos utilizadores da plataforma{" "}
             <strong>
-              acompanhar, em tempo real, o impacto da pandemia na zona onde se
-              encontram
+              acompanhar, em tempo real, os sintomas de outros utilizadores na
+              mesma área geográfica
             </strong>
-            , com base nas actualizações enviadas por todos os utilizadores.
+            , com base em atualizações feitas pelos próprios.
             <br />
-            <br />É ainda permitido aos cidadãos indicarem, de forma regular,
-            quais os seus sintomas, em particular aqueles que estão associados
-            ao COVID-19.
+            <br />
+            Os utilizadores devem indicar, de forma regular, quais os seus
+            sintomas, em particular aqueles que estão associados ao COVID-19.
           </Typography>
         </div>
         <div className={styles.column}>
           <Typography color="gray" variant="mediumBody" weight="medium">
-            Esta informação será agregada e partilhada com as autoridades
-            competentes que poderão depois dispor de informação importante para
-            tomarem as melhores decisões para o proteger e ajudar o país a
-            recuperar do impacto desta pandemia.
+            Respeitando sempre a privacidade dos utilizadores, esta informação
+            será agregada e partilhada com as autoridades de saúde, que poderão
+            depois utilizar esta informação para tomarem decisões que ajudem a
+            proteger os cidadãos desta pandemia.
             <br />
             <br />A privacidade dos dados recolhidos é tratada com o máximo
             cuidado. Leia os nossos{" "}

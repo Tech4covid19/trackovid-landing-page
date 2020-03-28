@@ -45,7 +45,7 @@ function SEO({ title, description, keywords }) {
       />
       <meta
         property="og:image"
-        content={`${siteUrl}/images/covidografia-share.png`}
+        content={`${siteUrl}/images/covidografia-share.png?v2`}
       />
     </Helmet>
   );

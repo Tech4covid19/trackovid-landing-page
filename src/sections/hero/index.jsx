@@ -48,9 +48,10 @@ const Hero = () => {
             weight="medium"
             className={styles.typography}
           >
-            A sua ajuda é fundamental para as autoridades de saúde acompanharem
-            os seus sintomas durante o surto de COVID-19. Veja a evolução da
-            pandemia na sua área de residência.
+            A colaboração de todos é fundamental para que as autoridades de
+            saúde possam acompanhar o desenvolvimento geográfico do surto de
+            COVID-19. Só assim será possível avaliar com mais precisão a
+            evolução da pandemia na sua área de residência.
           </Typography>
           <Button
             href={data.site.siteMetadata.appSiteUrl}
