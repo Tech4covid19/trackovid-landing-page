@@ -52,7 +52,7 @@ const ComoUsar = () => {
             <Typography weight="bold">Registe-se na plataforma</Typography>
             <div className={styles.columnSubTitle}>
               <Typography color="gray" variant="mediumBody" weight="medium">
-                Use a sua conta de Facebook para se registar. Mais opções de
+                Use a sua conta de Facebook ou Google para se registar. Mais opções de
                 login em breve.
               </Typography>
             </div>
