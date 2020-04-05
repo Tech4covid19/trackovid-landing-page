@@ -3,7 +3,7 @@ import Typography from "@/components/typography";
 import Button from "@/components/button";
 import privacidadeEsquema from "@/assets/privacidade-esquema.png";
 import { useStaticQuery, graphql } from "gatsby";
-import TitleContent from "../title-content/index";
+import SectionContent from "../section-content/index";
 
 import styles from "./index.module.css";
 
@@ -22,7 +22,7 @@ export default function Privacidade() {
   return (
     <div className={styles.root}>
       <div className={styles.container}>
-        <TitleContent title="Segurança e Privacidade de Dados">
+        <SectionContent title="Segurança e Privacidade de Dados">
           <Typography variant="smallBody">
             Os dados de sintomas armazenados não são identificáveis e não são
             correlacionáveis com dados de contacto. Isto foi possível graças à
@@ -70,8 +70,8 @@ export default function Privacidade() {
               aqui.
             </Button>
           </Typography>
-        </TitleContent>
-        <TitleContent title="Escrutínio">
+        </SectionContent>
+        <SectionContent title="Escrutínio">
           <Typography variant="smallBody">
             Código aberto: todo o software por detrás da Covidografia está
             inteiramente disponível no repositório da associação Tech4Covid19 em{" "}
@@ -91,8 +91,8 @@ export default function Privacidade() {
             melhores gabinetes jurídicos em Portugal, que acompanham, reveem,
             validam e orientam toda a forma como a Covidografia opera
           </Typography>
-        </TitleContent>
-        <TitleContent title="Governance">
+        </SectionContent>
+        <SectionContent title="Governance">
           <Typography variant="smallBody">
             Embora a Covidografia tenha centenas de contribuidores voluntários,
             o acesso à infraestrutura que serve a Covidografia.pt está limitado
@@ -123,8 +123,8 @@ export default function Privacidade() {
             afetados com COVID-19 e consequentemente reduzir o tempo da situação
             socioeconómica que Portugal enfrenta neste momento.
           </Typography>
-        </TitleContent>
-        <TitleContent title="Como tratamos os seus dados">
+        </SectionContent>
+        <SectionContent title="Como tratamos os seus dados">
           <Typography variant="mediumBody" weight="bold">
             Proteção de Dados por Defeito
           </Typography>
@@ -159,8 +159,8 @@ export default function Privacidade() {
             alt="diagrama privacidade"
             src={privacidadeEsquema}
           />
-        </TitleContent>
-        <TitleContent title="Conformidade com RGPD">
+        </SectionContent>
+        <SectionContent title="Conformidade com RGPD">
           <Typography variant="smallBody">
             As principais preocupações de conformidade com Regime Geral de
             Proteção de Dados (RGPD) incidem na base legal para o processamento
@@ -196,8 +196,8 @@ export default function Privacidade() {
             Amazon AWS, um fornecedor de infraestrutura com elevadíssima
             reputação e várias certificações relevantes (ISO27001, SOC2 e 3).
           </Typography>
-        </TitleContent>
-        <TitleContent title="Medidas de Segurança">
+        </SectionContent>
+        <SectionContent title="Medidas de Segurança">
           <Typography variant="smallBody">
             APIs privadas, como as de acesso a dados, são protegidas através de
             firewall que só permitem o acesso aos dados através de endereços de
@@ -223,7 +223,7 @@ export default function Privacidade() {
             O armazenamento de dados na infraestrutura é encriptado (Amazon’sS3
             e RDS).
           </Typography>
-        </TitleContent>
+        </SectionContent>
       </div>
     </div>
   );

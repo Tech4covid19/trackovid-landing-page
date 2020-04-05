@@ -5,7 +5,7 @@ import Typography from "@/components/typography";
 
 import styles from "./index.module.css";
 
-export default function TitleContent({ title, children }) {
+export default function SectionContent({ title, children }) {
   return (
     <div className={styles.container}>
       <Typography
@@ -21,7 +21,7 @@ export default function TitleContent({ title, children }) {
   );
 }
 
-TitleContent.propTypes = {
+SectionContent.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
