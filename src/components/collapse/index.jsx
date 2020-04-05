@@ -9,7 +9,7 @@ import addIcon from "@/assets/add.svg";
 
 import styles from "./index.module.css";
 
-export default function Collapse({ title, children, startOpen }) {
+export default function Collapse({ title, children, startOpen, ...props }) {
   const [isOpen, setIsOpen] = useState(startOpen);
   const [bodyHeight, setBodyHeight] = useState(0);
   const bodyRef = useRef(null);
@@ -27,8 +27,12 @@ export default function Collapse({ title, children, startOpen }) {
     }
   }, [bodyRef]);
 
+  useEffect(() => {
+    setIsOpen(startOpen);
+  }, [startOpen]);
+
   return (
-    <div className={className}>
+    <div className={className} {...props}>
       <div className={styles.header}>
         <button
           type="button"

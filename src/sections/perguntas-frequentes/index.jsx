@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Collapse from "@/components/collapse";
@@ -20,6 +20,7 @@ const query = graphql`
 
 export default function PerguntasFrequentes() {
   const data = useStaticQuery(query);
+  const [isWantToHelpOpen, setIsWantToHelpOpen] = useState(false);
   return (
     <div className={styles.root}>
       <div className={styles.container}>
@@ -33,7 +34,11 @@ export default function PerguntasFrequentes() {
             , uma associação sem fins lucrativos. Este movimento inclui mais de
             4800 voluntários a contribuir para diversos projetos de cariz
             tecnológico para lutar contra o COVID-19. Queres juntar-te a nós? Vê{" "}
-            <Button href="/perguntas-frequentes/#abc" type="textLink">
+            <Button
+              href="/perguntas-frequentes/#quero-ajudar"
+              type="textLink"
+              onClick={() => setIsWantToHelpOpen(true)}
+            >
               aqui
             </Button>{" "}
             como.
@@ -219,7 +224,11 @@ export default function PerguntasFrequentes() {
             dos pacientes em isolamento domiciliário de forma automática.
           </Typography>
         </Collapse>
-        <Collapse title="Quero ajudar no desenvolvimento da Covidografia - como devo fazer?">
+        <Collapse
+          id="quero-ajudar"
+          startOpen={isWantToHelpOpen}
+          title="Quero ajudar no desenvolvimento da Covidografia - como devo fazer?"
+        >
           <Typography variant="smallBody">
             Obrigado pelo teu interesse em ajudar-nos! Procuramos developers (vê{" "}
             <Button
@@ -230,7 +239,7 @@ export default function PerguntasFrequentes() {
             </Button>{" "}
             a nossa stack), marketeers e qualquer outro perfil que nos possa
             ajudar a ajudar! Lê primeiro o nosso{" "}
-            <Button href="/perguntas-frequentes/#" type="textLink">
+            <Button href="/codigo-conduta" type="textLink">
               Código de Conduta
             </Button>
             . Se achas que isto é para ti,{" "}
