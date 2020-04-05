@@ -9,7 +9,7 @@ export default function SectionContent({ title, children }) {
   return (
     <div className={styles.container}>
       <Typography
-        variant="body"
+        variant="h3"
         weight="bold"
         color="purple"
         className={styles.title}
