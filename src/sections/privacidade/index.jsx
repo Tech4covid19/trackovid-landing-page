@@ -28,9 +28,14 @@ export default function Privacidade() {
             correlacionáveis com dados de contacto. Isto foi possível graças à
             forma especial como os dados são tratados e armazenados. Veja mais
             em{" "}
-            <Button href="/perguntas-frequentes" type="sectionLink">
+            <Typography
+              variant="smallBody"
+              weight="bold"
+              color="purple"
+              className={styles.inlineText}
+            >
               Como tratamos os seus dados.
-            </Button>
+            </Typography>
           </Typography>
           <Typography variant="smallBody">
             Os dados recolhidos não são partilhados com terceiros, exceto com as
@@ -48,9 +53,17 @@ export default function Privacidade() {
             Toda a operação da Covidografia respeita na íntegra o Regulamento
             Geral de Proteção de Dados pessoais (RGPD), desde o desenho dos
             processos com princípios fundamentais como “Privacy by Design” e
-            “Data Minimization” (ver Como tratamos os seus dados) até à obtenção
-            do consentimento explícito para tratamento de dados pessoais e todos
-            os direitos salvaguardados no RGPD:
+            “Data Minimization” (ver{" "}
+            <Typography
+              variant="smallBody"
+              weight="bold"
+              color="purple"
+              className={styles.inlineText}
+            >
+              Como tratamos os seus dados.
+            </Typography>
+            ) até à obtenção do consentimento explícito para tratamento de dados
+            pessoais e todos os direitos salvaguardados no RGPD:
           </Typography>
           <Typography variant="ul">
             <li>
