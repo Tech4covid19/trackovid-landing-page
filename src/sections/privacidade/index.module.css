@@ -1,0 +1,23 @@
+@import "../../styles/all.module.css";
+
+.root {
+  background: $white;
+}
+
+.container {
+  max-width: 620px;
+  padding: 102px 54px;
+  margin: 0 auto;
+
+  @include breakpoint-mobile-only {
+    padding: 72px 36px;
+  }
+
+  @include breakpoint-xs-only {
+    padding: 56px 36px;
+  }
+}
+
+.image {
+  max-width: 100%;
+}
