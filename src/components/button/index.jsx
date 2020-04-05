@@ -64,7 +64,7 @@ function Button({ children, href, type, className: otherClass, ...props }) {
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string,
-  type: PropTypes.oneOf(["link", "outline", "cta", "textLink"]),
+  type: PropTypes.oneOf(["link", "outline", "cta", "textLink", "sectionLink"]),
   className: PropTypes.string,
 };
 

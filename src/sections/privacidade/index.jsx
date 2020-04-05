@@ -28,14 +28,12 @@ export default function Privacidade() {
             correlacionáveis com dados de contacto. Isto foi possível graças à
             forma especial como os dados são tratados e armazenados. Veja mais
             em{" "}
-            <Typography
-              variant="smallBody"
-              weight="bold"
-              color="purple"
-              className={styles.inlineText}
+            <Button
+              href="/privacidade#como-tratamos-os-seus-dados"
+              type="sectionLink"
             >
               Como tratamos os seus dados.
-            </Typography>
+            </Button>
           </Typography>
           <Typography variant="smallBody">
             Os dados recolhidos não são partilhados com terceiros, exceto com as
@@ -54,14 +52,12 @@ export default function Privacidade() {
             Geral de Proteção de Dados pessoais (RGPD), desde o desenho dos
             processos com princípios fundamentais como “Privacy by Design” e
             “Data Minimization” (ver{" "}
-            <Typography
-              variant="smallBody"
-              weight="bold"
-              color="purple"
-              className={styles.inlineText}
+            <Button
+              href="/privacidade#como-tratamos-os-seus-dados"
+              type="sectionLink"
             >
               Como tratamos os seus dados.
-            </Typography>
+            </Button>
             ) até à obtenção do consentimento explícito para tratamento de dados
             pessoais e todos os direitos salvaguardados no RGPD:
           </Typography>
@@ -137,42 +133,45 @@ export default function Privacidade() {
             socioeconómica que Portugal enfrenta neste momento.
           </Typography>
         </SectionContent>
-        <SectionContent title="Como tratamos os seus dados">
-          <Typography variant="mediumBody" weight="bold">
-            Proteção de Dados por Defeito
-          </Typography>
-          <Typography variant="smallBody">
-            Para que seja assegurada a proteção de dados por defeito, a recolha
-            de dados segue as seguintes regras fundamentais:
-          </Typography>
-          <Typography variant="smallBody">
-            Dados pessoais, como endereço de email, são segregados e
-            descorrelacionados com informação de saúde mais sensível, como a
-            avaliação sintomática submetida pelo utilizador. A correlação só é
-            temporariamente possível enquanto o utilizador tem uma sessão
-            aberta. Este descorrelacionamento é obtido através da utilização de
-            duas funções de encriptação diferentes aplicadas ao Identificador
-            Único do Facebook. Isto resulta em dois novos Identificadores
-            descorrelacionados, que são utilizados para guardar separadamente as
-            duas classes de dados: dados pessoais e informação de saúde.
-          </Typography>
-          <Typography variant="smallBody">
-            Eventos pessoais não são guardados com a mesma precisão que eventos
-            relacionados com os dados de saúde, garantindo assim uma baixa
-            correlação entre eles (por exemplo, apenas guarda o dia em que o
-            utilizador submete a sua última atualização de estado sintomático,
-            não guardando hora, minuto ou segundo).
-          </Typography>
-          <Typography variant="smallBody">
-            O diagrama abaixo descreve com maior detalhe a forma como os dados
-            são guardados.
-          </Typography>
-          <img
-            className={styles.image}
-            alt="diagrama privacidade"
-            src={privacidadeEsquema}
-          />
-        </SectionContent>
+        <div id="como-tratamos-os-seus-dados">
+          <SectionContent title="Como tratamos os seus dados">
+            <Typography variant="mediumBody" weight="bold">
+              Proteção de Dados por Defeito
+            </Typography>
+            <Typography variant="smallBody">
+              Para que seja assegurada a proteção de dados por defeito, a
+              recolha de dados segue as seguintes regras fundamentais:
+            </Typography>
+            <Typography variant="smallBody">
+              Dados pessoais, como endereço de email, são segregados e
+              descorrelacionados com informação de saúde mais sensível, como a
+              avaliação sintomática submetida pelo utilizador. A correlação só é
+              temporariamente possível enquanto o utilizador tem uma sessão
+              aberta. Este descorrelacionamento é obtido através da utilização
+              de duas funções de encriptação diferentes aplicadas ao
+              Identificador Único do Facebook. Isto resulta em dois novos
+              Identificadores descorrelacionados, que são utilizados para
+              guardar separadamente as duas classes de dados: dados pessoais e
+              informação de saúde.
+            </Typography>
+            <Typography variant="smallBody">
+              Eventos pessoais não são guardados com a mesma precisão que
+              eventos relacionados com os dados de saúde, garantindo assim uma
+              baixa correlação entre eles (por exemplo, apenas guarda o dia em
+              que o utilizador submete a sua última atualização de estado
+              sintomático, não guardando hora, minuto ou segundo).
+            </Typography>
+            <Typography variant="smallBody">
+              O diagrama abaixo descreve com maior detalhe a forma como os dados
+              são guardados.
+            </Typography>
+            <img
+              className={styles.image}
+              alt="diagrama privacidade"
+              src={privacidadeEsquema}
+            />
+          </SectionContent>
+        </div>
         <SectionContent title="Conformidade com RGPD">
           <Typography variant="smallBody">
             As principais preocupações de conformidade com Regime Geral de
