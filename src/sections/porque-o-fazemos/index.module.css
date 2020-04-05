@@ -1,0 +1,65 @@
+@import "../../styles/all.module.css";
+
+.root {
+  width: 100%;
+  background: $light-gray;
+}
+
+.container {
+  max-width: 988px;
+  padding: 76px 24px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    padding: 56px 36px;
+  }
+}
+
+.subtitle {
+  max-width: 676px;
+  margin: 21px auto 0 auto;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    text-align: left;
+  }
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 72px;
+  margin-bottom: 72px;
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.column {
+  width: 100%;
+  max-width: 250px;
+
+  @include breakpoint-mobile-only {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.image {
+  height: 184px;
+  margin-bottom: 16px;
+}
+
+.imageText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
