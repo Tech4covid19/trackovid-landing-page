@@ -22,7 +22,7 @@ const FollowProject = () => {
         <div className={styles.socialNetworks}>
           <div>
             <a
-              href="#facebook"
+              href="https://www.facebook.com/covidografia/"
               className={styles.socialNetwork}
               target="_blank"
               rel="noopener noreferrer"
@@ -46,7 +46,7 @@ const FollowProject = () => {
           </div>
           <div>
             <a
-              href="#twitter"
+              href="https://twitter.com/covidografia"
               className={styles.socialNetwork}
               target="_blank"
               rel="noopener noreferrer"
@@ -70,7 +70,7 @@ const FollowProject = () => {
           </div>
           <div>
             <a
-              href="#instagram"
+              href="https://www.instagram.com/covidografia/"
               className={styles.socialNetwork}
               target="_blank"
               rel="noopener noreferrer"
@@ -94,7 +94,7 @@ const FollowProject = () => {
           </div>
           <div>
             <a
-              href="#linkedin"
+              href="https://www.linkedin.com/showcase/covidografia/"
               className={styles.socialNetwork}
               target="_blank"
               rel="noopener noreferrer"
