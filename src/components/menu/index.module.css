@@ -1,0 +1,19 @@
+@import "../../styles/all.module.css";
+
+.root {
+  padding: auto;
+}
+
+.menu {
+  padding: auto;
+}
+
+.hideMenu {
+  display: none;
+}
+
+.hideDesktop {
+  @include breakpoint-desktop-only {
+    display: none;
+  }
+}

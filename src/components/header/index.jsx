@@ -6,9 +6,8 @@ import classNames from "classnames";
 import Button from "@/components/button";
 import Typography from "@/components/typography";
 import Sticky from "@/components/sticky";
-
+import Menu from "@/components/menu";
 import logo from "@/assets/logo.svg";
-
 import styles from "./index.module.css";
 
 const query = graphql`
@@ -38,27 +37,36 @@ const useWindowScroll = () => {
   return scrollY;
 };
 
-export default function Header({ onlyShowLogoWhenSticky }) {
+export default function Header({ onlyShowLogoWhenSticky, showMenu }) {
   const data = useStaticQuery(query);
   const scrollY = useWindowScroll();
   const isSticky = scrollY >= 10;
   const className = classNames(styles.root, {
     [styles.sticky]: isSticky,
   });
-  const hideLogo = onlyShowLogoWhenSticky && !isSticky;
+  const hideLogo = (onlyShowLogoWhenSticky && !isSticky) || !showMenu;
+  const hideLogoMobile = !showMenu;
+  const hideHeaderLinks = showMenu;
+  console.log(hideLogo);
   return (
     <Sticky>
       <header className={className}>
         <div className={styles.inner}>
+          <Menu showMenu={showMenu} />
           <Link
             to="/"
-            className={classNames(styles.logo, styles.hideMobile, {
+            className={classNames(styles.logo, {
               [styles.hideLogo]: hideLogo,
+              [styles.hideMobile]: hideLogoMobile,
             })}
           >
             <img src={logo} alt={data.site.siteMetadata.title} />
           </Link>
-          <div className={styles.nav}>
+          <div
+            className={classNames(styles.nav, {
+              [styles.hideHeaderLinks]: hideHeaderLinks,
+            })}
+          >
             <Link to="/#para-que-serve" className={styles.link}>
               <Typography variant="smallCta" weight="bold">
                 Para que serve?
@@ -107,8 +115,10 @@ export default function Header({ onlyShowLogoWhenSticky }) {
 
 Header.propTypes = {
   onlyShowLogoWhenSticky: PropTypes.bool,
+  showMenu: PropTypes.bool,
 };
 
 Header.defaultProps = {
   onlyShowLogoWhenSticky: false,
+  showMenu: false,
 };

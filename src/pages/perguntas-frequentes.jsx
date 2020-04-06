@@ -14,7 +14,7 @@ const FAQ = () => {
   return (
     <Layout>
       <SEO title="Perguntas frequentes" />
-      <Header />
+      <Header showMenu />
       <SimpleHero title="Perguntas frequentes" date="5 de abril de 2020" />
       <PerguntasFrequentes />
       <FaqQuemSomos />

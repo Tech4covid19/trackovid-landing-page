@@ -84,6 +84,10 @@
   }
 }
 
+.hideHeaderLinks {
+  display: none;
+}
+
 .hideMobile {
   @include breakpoint-mobile-only {
     display: none;
