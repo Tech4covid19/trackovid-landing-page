@@ -1,0 +1,44 @@
+@import "../../styles/all.module.css";
+
+.root {
+  padding: 96px 0;
+  background: $white;
+}
+
+.container {
+  max-width: 1176px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.teamContainer {
+  margin-right: 72px;
+  margin-bottom: 80px;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.person {
+  width: 183px;
+  margin-top: 32px;
+  text-align: center;
+}
