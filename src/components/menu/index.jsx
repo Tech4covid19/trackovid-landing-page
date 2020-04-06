@@ -7,9 +7,9 @@ import closeMenu from "@/assets/close-menu.svg";
 
 import styles from "./index.module.css";
 
-export default function Menu({ hideLandingMobile }) {
+export default function Menu({ isLandingPage }) {
   const className = classNames(styles.root, styles.menu, styles.hideDesktop, {
-    [styles.hideLandingMobile]: hideLandingMobile,
+    [styles.isLandingPage]: isLandingPage,
   });
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -29,9 +29,9 @@ export default function Menu({ hideLandingMobile }) {
 }
 
 Menu.propTypes = {
-  hideLandingMobile: PropTypes.bool,
+  isLandingPage: PropTypes.bool,
 };
 
 Menu.defaultProps = {
-  hideLandingMobile: false,
+  isLandingPage: false,
 };

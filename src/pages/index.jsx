@@ -14,7 +14,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO />
-      <Header hideLandingMobile />
+      <Header isLandingPage />
       <Hero />
       <ParaQueServe />
       <ComoUsar />

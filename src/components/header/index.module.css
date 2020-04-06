@@ -51,20 +51,36 @@
   }
 }
 
-.hideDesktop {
-  @include breakpoint-desktop-only {
-    display: none;
-  }
-}
-
 .nav {
   display: flex;
   align-items: center;
 }
 
-.nav.supportPage {
-  @include breakpoint-mobile-only {
-    display: none;
+.navSecondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 318px;
+  padding: 24px 0;
+  background: #f8fafb;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04),
+    0 10px 20px rgba(0, 0, 0, 0.04);
+
+  a {
+    margin: 16px;
+  }
+
+  p {
+    flex: none;
+    align-self: center;
+    order: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    color: #798794;
+    text-align: center;
   }
 }
 
@@ -92,8 +108,8 @@
   }
 }
 
-.hideLandingMobile {
-  @include breakpoint-mobile-only {
+.hideDesktop {
+  @include breakpoint-tablet-and-above {
     display: none;
   }
 }

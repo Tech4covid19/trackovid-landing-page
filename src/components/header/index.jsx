@@ -113,6 +113,52 @@ export default function Header({ isLandingPage }) {
           </div>
         </div>
       </header>
+      <nav
+        className={classNames(styles.navSecondary, styles.hideDesktop, {
+          [styles.hideMobile]: isLandingPage,
+        })}
+      >
+        <Link to="/#para-que-serve" className={styles.link}>
+          <Typography variant="smallCta" weight="bold">
+            Para que serve?
+          </Typography>
+        </Link>
+        <Link to="/#como-usar" className={styles.link}>
+          <Typography variant="smallCta" weight="bold">
+            Como usar?
+          </Typography>
+        </Link>
+        <Link
+          to="/quem-somos"
+          className={classNames(styles.link, {
+            [styles.hideMobile]: isLandingPage,
+          })}
+        >
+          <Typography variant="smallCta" weight="bold">
+            Quem somos
+          </Typography>
+        </Link>
+        <Link
+          to="/privacidade"
+          className={classNames(styles.link, {
+            [styles.hideMobile]: isLandingPage,
+          })}
+        >
+          <Typography variant="smallCta" weight="bold">
+            Privacidade
+          </Typography>
+        </Link>
+        <Link
+          to="/perguntas-frequentes"
+          className={classNames(styles.link, {
+            [styles.hideMobile]: isLandingPage,
+          })}
+        >
+          <Typography variant="smallCta" weight="bold">
+            Perguntas frequentes
+          </Typography>
+        </Link>
+      </nav>
     </Sticky>
   );
 }
