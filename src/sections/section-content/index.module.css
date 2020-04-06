@@ -1,0 +1,17 @@
+@import "../../styles/all.module.css";
+
+.root {
+  background: $white;
+}
+
+.container {
+  margin-bottom: 69px;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.content > * {
+  margin-bottom: 16px;
+}

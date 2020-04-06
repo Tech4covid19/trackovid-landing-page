@@ -24,6 +24,15 @@
   text-decoration: underline;
 }
 
+.sectionLink {
+  display: inline;
+  padding: 0;
+  font-weight: 700;
+  color: $purple;
+  text-decoration: underline;
+  background: transparent;
+}
+
 .outline {
   padding: 8px 19px;
   color: $orange;

@@ -19,16 +19,18 @@ export default function SimpleHero({ title, date }) {
             {title}
           </Typography>
         </div>
-        <div>
-          <Typography
-            variant="body"
-            color="gray"
-            weight="medium"
-            className={styles.date}
-          >
-            Última actualização em {date}
-          </Typography>
-        </div>
+        {date && (
+          <div>
+            <Typography
+              variant="body"
+              color="gray"
+              weight="medium"
+              className={styles.date}
+            >
+              Última actualização em {date}
+            </Typography>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -36,5 +38,9 @@ export default function SimpleHero({ title, date }) {
 
 SimpleHero.propTypes = {
   title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  date: PropTypes.string,
+};
+
+SimpleHero.defaultProps = {
+  date: null,
 };
