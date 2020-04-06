@@ -6,8 +6,10 @@ import classNames from "classnames";
 import Button from "@/components/button";
 import Typography from "@/components/typography";
 import Sticky from "@/components/sticky";
-import Menu from "@/components/menu";
+
 import logo from "@/assets/logo.svg";
+import hamburguer from "@/assets/hamburguer.svg";
+import closeMenu from "@/assets/close-menu.svg";
 import styles from "./index.module.css";
 
 const query = graphql`
@@ -44,11 +46,28 @@ export default function Header({ isLandingPage }) {
   const className = classNames(styles.root, {
     [styles.sticky]: isSticky,
   });
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuClasses = classNames(styles.root, styles.menu, styles.hideDesktop, {
+    [styles.isLandingPage]: isLandingPage,
+  });
+
   return (
     <Sticky>
       <header className={className}>
         <div className={styles.inner}>
-          <Menu isLandingPage={isLandingPage} />
+          <button
+            className={menuClasses}
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <img
+              className={styles.hamburguer}
+              src={menuOpen ? closeMenu : hamburguer}
+              alt="Menu"
+            />
+          </button>
+
           <Link
             to="/"
             className={classNames(styles.logo, {
@@ -116,6 +135,7 @@ export default function Header({ isLandingPage }) {
       <nav
         className={classNames(styles.navSecondary, styles.hideDesktop, {
           [styles.hideMobile]: isLandingPage,
+          [styles.menuClosed]: !menuOpen,
         })}
       >
         <Link to="/#para-que-serve" className={styles.link}>
