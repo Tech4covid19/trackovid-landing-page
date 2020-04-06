@@ -45,22 +45,33 @@ export default function Header({ isLandingPage }) {
   const isSticky = scrollY >= 10;
   const className = classNames(styles.root, {
     [styles.sticky]: isSticky,
+    [styles.isLandingPage]: isLandingPage,
   });
 
   const [menuOpen, setMenuOpen] = useState(false);
   const menuClasses = classNames(styles.root, styles.menu, styles.hideDesktop, {
-    [styles.isLandingPage]: isLandingPage,
+    [styles.hideMobile]: isLandingPage,
   });
+
+  useEffect(() => {
+    if (!menuOpen) {
+      document.body.style.overflow = "";
+    }
+  }, [menuOpen]);
+
+  const toggleMenu = () => {
+    if (!menuOpen) {
+      document.body.style.overflow = "hidden";
+    }
+
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <Sticky>
       <header className={className}>
         <div className={styles.inner}>
-          <button
-            className={menuClasses}
-            type="button"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
+          <button className={menuClasses} type="button" onClick={toggleMenu}>
             <img
               className={styles.hamburguer}
               src={menuOpen ? closeMenu : hamburguer}
@@ -132,53 +143,59 @@ export default function Header({ isLandingPage }) {
           </div>
         </div>
       </header>
-      <nav
-        className={classNames(styles.navSecondary, styles.hideDesktop, {
-          [styles.hideMobile]: isLandingPage,
-          [styles.menuClosed]: !menuOpen,
+      <div
+        className={classNames({
+          [styles.overlay]: menuOpen,
         })}
       >
-        <Link to="/#para-que-serve" className={styles.link}>
-          <Typography variant="smallCta" weight="bold">
-            Para que serve?
-          </Typography>
-        </Link>
-        <Link to="/#como-usar" className={styles.link}>
-          <Typography variant="smallCta" weight="bold">
-            Como usar?
-          </Typography>
-        </Link>
-        <Link
-          to="/quem-somos"
-          className={classNames(styles.link, {
+        <nav
+          className={classNames(styles.navSecondary, styles.hideDesktop, {
             [styles.hideMobile]: isLandingPage,
+            [styles.menuClosed]: !menuOpen,
           })}
         >
-          <Typography variant="smallCta" weight="bold">
-            Quem somos
-          </Typography>
-        </Link>
-        <Link
-          to="/privacidade"
-          className={classNames(styles.link, {
-            [styles.hideMobile]: isLandingPage,
-          })}
-        >
-          <Typography variant="smallCta" weight="bold">
-            Privacidade
-          </Typography>
-        </Link>
-        <Link
-          to="/perguntas-frequentes"
-          className={classNames(styles.link, {
-            [styles.hideMobile]: isLandingPage,
-          })}
-        >
-          <Typography variant="smallCta" weight="bold">
-            Perguntas frequentes
-          </Typography>
-        </Link>
-      </nav>
+          <Link to="/#para-que-serve" className={styles.link}>
+            <Typography variant="smallCta" weight="bold">
+              Para que serve?
+            </Typography>
+          </Link>
+          <Link to="/#como-usar" className={styles.link}>
+            <Typography variant="smallCta" weight="bold">
+              Como usar?
+            </Typography>
+          </Link>
+          <Link
+            to="/quem-somos"
+            className={classNames(styles.link, {
+              [styles.hideMobile]: isLandingPage,
+            })}
+          >
+            <Typography variant="smallCta" weight="bold">
+              Quem somos
+            </Typography>
+          </Link>
+          <Link
+            to="/privacidade"
+            className={classNames(styles.link, {
+              [styles.hideMobile]: isLandingPage,
+            })}
+          >
+            <Typography variant="smallCta" weight="bold">
+              Privacidade
+            </Typography>
+          </Link>
+          <Link
+            to="/perguntas-frequentes"
+            className={classNames(styles.link, {
+              [styles.hideMobile]: isLandingPage,
+            })}
+          >
+            <Typography variant="smallCta" weight="bold">
+              Perguntas frequentes
+            </Typography>
+          </Link>
+        </nav>
+      </div>
     </Sticky>
   );
 }
