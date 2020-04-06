@@ -37,6 +37,12 @@
   margin: 0 auto;
 
   @include breakpoint-mobile-only {
+    justify-content: space-between;
+  }
+}
+
+.isLandingPage {
+  .inner {
     justify-content: flex-end;
   }
 }
@@ -51,13 +57,15 @@
   }
 }
 
-.hideLogo {
-  opacity: 0;
-}
-
 .nav {
   display: flex;
   align-items: center;
+}
+
+.overlay {
+  height: 1000px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .link {
@@ -70,17 +78,44 @@
   }
 
   p {
-    color: $black;
     transition: color 0.18s ease;
   }
 
   &:hover {
     color: black;
     text-decoration: underline;
+  }
+}
 
-    p {
-      color: black;
-    }
+.navSecondary {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 24px;
+  background: #f8fafb;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04),
+    0 10px 20px rgba(0, 0, 0, 0.04);
+
+  a {
+    margin: 16px;
+  }
+
+  p {
+    flex: none;
+    align-self: center;
+    order: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    color: #798794;
+    text-align: center;
+  }
+}
+
+.hideDesktop {
+  @include breakpoint-tablet-and-above {
+    display: none;
   }
 }
 
@@ -88,4 +123,19 @@
   @include breakpoint-mobile-only {
     display: none;
   }
+}
+
+.menu {
+  padding: 0;
+  font-size: 0;
+  background: transparent;
+
+  .hamburguer {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.menuClosed {
+  display: none;
 }
