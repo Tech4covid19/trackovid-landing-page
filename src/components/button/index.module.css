@@ -24,11 +24,21 @@
   text-decoration: underline;
 }
 
+
 .purpleLink {
   display: inline;
   font-weight: 700;
   color: $purple;
   text-decoration: underline;
+}
+
+.sectionLink {
+  display: inline;
+  padding: 0;
+  font-weight: 700;
+  color: $purple;
+  text-decoration: underline;
+  background: transparent;
 }
 
 .outline {
