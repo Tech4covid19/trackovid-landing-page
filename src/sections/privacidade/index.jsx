@@ -22,7 +22,10 @@ export default function Privacidade() {
   return (
     <div className={styles.root}>
       <div className={styles.container}>
-        <SectionContent title="Segurança e Privacidade de Dados">
+        <SectionContent title="Como são os seus dados protegidos">
+          <Typography variant="mediumBody" weight="bold">
+            Segurança e Privacidade de Dados
+          </Typography>
           <Typography variant="smallBody">
             Os dados de sintomas armazenados não são identificáveis e não são
             correlacionáveis com dados de contacto. Isto foi possível graças à
@@ -79,8 +82,9 @@ export default function Privacidade() {
               aqui.
             </Button>
           </Typography>
-        </SectionContent>
-        <SectionContent title="Escrutínio">
+          <Typography variant="mediumBody" weight="bold">
+            Escrutínio
+          </Typography>
           <Typography variant="smallBody">
             Código aberto: todo o software por detrás da Covidografia está
             inteiramente disponível no repositório da associação Tech4Covid19 em{" "}
@@ -100,8 +104,9 @@ export default function Privacidade() {
             melhores gabinetes jurídicos em Portugal, que acompanham, reveem,
             validam e orientam toda a forma como a Covidografia opera
           </Typography>
-        </SectionContent>
-        <SectionContent title="Governance">
+          <Typography variant="mediumBody" weight="bold">
+            Governance
+          </Typography>
           <Typography variant="smallBody">
             Embora a Covidografia tenha centenas de contribuidores voluntários,
             o acesso à infraestrutura que serve a Covidografia.pt está limitado
@@ -170,72 +175,76 @@ export default function Privacidade() {
               alt="diagrama privacidade"
               src={privacidadeEsquema}
             />
+            <Typography variant="mediumBody" weight="bold">
+              Conformidade com RGPD
+            </Typography>
+            <Typography variant="smallBody">
+              As principais preocupações de conformidade com Regime Geral de
+              Proteção de Dados (RGPD) incidem na base legal para o
+              processamento dos dados e na garantia que os dados do utilizador
+              são mantidos de forma segura e com mecanismos que assegurem uma
+              proteção adequada no caso de possíveis vazamentos de dados. Para
+              cumprir estes requisitos, os seguintes processos foram
+              implementados, após a revisão por parte de várias equipas de apoio
+              legal:
+            </Typography>
+            <Typography variant="smallBody">
+              1. Formulários de consentimento explícito formam a base legal para
+              o processamento dos dados. É requerido ao utilizador que
+              explicitamente aceita que os seus dados sintomáticos sejam
+              processados, assim como os seus dados pessoais, para efeitos de
+              notificações. Métodos claros e fáceis para o utilizador poder
+              requerer o acesso aos seus dados (Portabilidade de Dados) ou para
+              requerer a eliminação de todos os seus dados (Direito ao
+              Esquecimento).
+            </Typography>
+            <Typography variant="smallBody">
+              2. Toda a informação pessoal associada com informação de saúde é
+              pseudo-anonimizada com funções criptográficas antes de ser
+              guardada, garantido um nível elevado de anonimato em caso de haver
+              um vazamento de dados.
+            </Typography>
+            <Typography variant="smallBody">
+              3. Todo o fluxo de dados de e para os dispositivos dos
+              utilizadores são encriptadas (SSL).
+            </Typography>
+            <Typography variant="smallBody">
+              4. O serviço está implementado de forma a manter todos os dados
+              dos utilizadores dentro da União Europeia através da
+              infraestrutura da Amazon AWS, um fornecedor de infraestrutura com
+              elevadíssima reputação e várias certificações relevantes
+              (ISO27001, SOC2 e 3).
+            </Typography>
+            <Typography variant="mediumBody" weight="bold">
+              Medidas de Segurança
+            </Typography>
+            <Typography variant="smallBody">
+              APIs privadas, como as de acesso a dados, são protegidas através
+              de firewall que só permitem o acesso aos dados através de
+              endereços de IP dedicados da Covidografia.pt e pelos endereços de
+              IP dos utilizadores da plataforma.
+            </Typography>
+            <Typography variant="smallBody">
+              As interfaces públicas com acesso restrito, como quadros
+              operacionais, são acedidos via conexões encriptadas (HTTPS), e
+              estão restringidos via uma combinação de nome de utilizador e
+              palavra passe, ou então via serviços de autenticação escolhidos
+              pelo utilizador (exemplo: Facebook). Adicionalmente, a utilização
+              destes acessos é monitorizada e gravada para permitir auditorias.
+            </Typography>
+            <Typography variant="smallBody">
+              A infraestrutura e o acesso à gestão do software estão protegidos
+              por firewall, só permitindo acesso nos escritórios da equipa da
+              Covidografia ou via VPNs privadas. Adicionalmente, estes acessos
+              requerem também um conjunto de chaves privadas e passwords,
+              garantindo que o acesso é limitado a membros ativos da equipa.
+            </Typography>
+            <Typography variant="smallBody">
+              O armazenamento de dados na infraestrutura é encriptado
+              (Amazon’sS3 e RDS).
+            </Typography>
           </SectionContent>
         </div>
-        <SectionContent title="Conformidade com RGPD">
-          <Typography variant="smallBody">
-            As principais preocupações de conformidade com Regime Geral de
-            Proteção de Dados (RGPD) incidem na base legal para o processamento
-            dos dados e na garantia que os dados do utilizador são mantidos de
-            forma segura e com mecanismos que assegurem uma proteção adequada no
-            caso de possíveis vazamentos de dados. Para cumprir estes
-            requisitos, os seguintes processos foram implementados, após a
-            revisão por parte de várias equipas de apoio legal:
-          </Typography>
-          <Typography variant="smallBody">
-            1. Formulários de consentimento explícito formam a base legal para o
-            processamento dos dados. É requerido ao utilizador que
-            explicitamente aceita que os seus dados sintomáticos sejam
-            processados, assim como os seus dados pessoais, para efeitos de
-            notificações. Métodos claros e fáceis para o utilizador poder
-            requerer o acesso aos seus dados (Portabilidade de Dados) ou para
-            requerer a eliminação de todos os seus dados (Direito ao
-            Esquecimento).
-          </Typography>
-          <Typography variant="smallBody">
-            2. Toda a informação pessoal associada com informação de saúde é
-            pseudo-anonimizada com funções criptográficas antes de ser guardada,
-            garantido um nível elevado de anonimato em caso de haver um
-            vazamento de dados.
-          </Typography>
-          <Typography variant="smallBody">
-            3. Todo o fluxo de dados de e para os dispositivos dos utilizadores
-            são encriptadas (SSL).
-          </Typography>
-          <Typography variant="smallBody">
-            4. O serviço está implementado de forma a manter todos os dados dos
-            utilizadores dentro da União Europeia através da infraestrutura da
-            Amazon AWS, um fornecedor de infraestrutura com elevadíssima
-            reputação e várias certificações relevantes (ISO27001, SOC2 e 3).
-          </Typography>
-        </SectionContent>
-        <SectionContent title="Medidas de Segurança">
-          <Typography variant="smallBody">
-            APIs privadas, como as de acesso a dados, são protegidas através de
-            firewall que só permitem o acesso aos dados através de endereços de
-            IP dedicados da Covidografia.pt e pelos endereços de IP dos
-            utilizadores da plataforma.
-          </Typography>
-          <Typography variant="smallBody">
-            As interfaces públicas com acesso restrito, como quadros
-            operacionais, são acedidos via conexões encriptadas (HTTPS), e estão
-            restringidos via uma combinação de nome de utilizador e palavra
-            passe, ou então via serviços de autenticação escolhidos pelo
-            utilizador (exemplo: Facebook). Adicionalmente, a utilização destes
-            acessos é monitorizada e gravada para permitir auditorias.
-          </Typography>
-          <Typography variant="smallBody">
-            A infraestrutura e o acesso à gestão do software estão protegidos
-            por firewall, só permitindo acesso nos escritórios da equipa da
-            Covidografia ou via VPNs privadas. Adicionalmente, estes acessos
-            requerem também um conjunto de chaves privadas e passwords,
-            garantindo que o acesso é limitado a membros ativos da equipa.
-          </Typography>
-          <Typography variant="smallBody">
-            O armazenamento de dados na infraestrutura é encriptado (Amazon’sS3
-            e RDS).
-          </Typography>
-        </SectionContent>
       </div>
     </div>
   );
