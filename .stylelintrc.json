@@ -8,6 +8,7 @@
   "plugins": ["stylelint-scss", "stylelint-prettier"],
   "rules": {
     "prettier/prettier": true,
-    "at-rule-no-unknown": null
+    "at-rule-no-unknown": null,
+    "value-keyword-case": null
   }
 }

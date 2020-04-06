@@ -1,0 +1,75 @@
+@import "../../styles/all.module.css";
+
+.root {
+  padding-bottom: 0;
+  background: $white;
+  transition: all 300ms ease-in-out;
+}
+
+.isOpen {
+  padding-bottom: 32px;
+
+  @include breakpoint-mobile-only {
+    padding-bottom: 24px;
+  }
+}
+
+.header {
+  padding: 32px 0;
+  border-top: 1px solid #d1d4d6;
+
+  @include breakpoint-mobile-only {
+    padding: 24px 0;
+  }
+}
+
+.headerButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 30px;
+  padding: 0 6px 0 0;
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.title {
+  position: relative;
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: -0.4px;
+
+  @include breakpoint-mobile-only {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @include breakpoint-xs-only {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.icon {
+  margin-left: 22px;
+}
+
+.body {
+  max-width: 491px;
+  padding-left: 32px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  p {
+    line-height: 20px;
+    letter-spacing: -0.25px;
+  }
+
+  @include breakpoint-xs-only {
+    padding-left: 0;
+  }
+}

@@ -16,7 +16,7 @@ const query = graphql`
   }
 `;
 
-function Button({ children, href, type, className: otherClass }) {
+function Button({ children, href, type, className: otherClass, ...props }) {
   const data = useStaticQuery(query);
 
   if (href) {
@@ -35,7 +35,7 @@ function Button({ children, href, type, className: otherClass }) {
     );
 
     return isInternalLink ? (
-      <Link to={href} className={className}>
+      <Link to={href} className={className} {...props}>
         {children}
       </Link>
     ) : (
@@ -46,6 +46,7 @@ function Button({ children, href, type, className: otherClass }) {
           target: "_blank",
           rel: "noopener noreferrer",
         })}
+        {...props}
       >
         {children}
       </a>
@@ -63,7 +64,7 @@ function Button({ children, href, type, className: otherClass }) {
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string,
-  type: PropTypes.oneOf(["link", "outline", "cta"]),
+  type: PropTypes.oneOf(["link", "outline", "cta", "textLink"]),
   className: PropTypes.string,
 };
 

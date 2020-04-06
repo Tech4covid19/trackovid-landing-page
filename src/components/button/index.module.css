@@ -17,7 +17,15 @@
   }
 }
 
+.textLink {
+  display: inline;
+  font-weight: 700;
+  color: $black;
+  text-decoration: underline;
+}
+
 .purpleLink {
+  display: inline;
   font-weight: 700;
   color: $purple;
   text-decoration: underline;

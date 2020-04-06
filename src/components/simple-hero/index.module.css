@@ -1,0 +1,47 @@
+@import "../../styles/all.module.css";
+
+.root {
+  background: $light-gray;
+}
+
+.container {
+  max-width: 1180px;
+  height: 100%;
+  padding: 240px 24px 190px;
+  margin: 0 auto;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    padding: 200px 36px 150px;
+  }
+
+  @include breakpoint-xs-only {
+    padding: 160px 36px 110px;
+  }
+}
+
+.title {
+  font-size: 82px;
+  line-height: 94px;
+
+  @include breakpoint-mobile-only {
+    font-size: 62px;
+    line-height: 71px;
+  }
+
+  @include breakpoint-xs-only {
+    font-size: 48px;
+    line-height: 55px;
+  }
+}
+
+.date {
+  margin-top: 16px;
+  font-size: 21px;
+  line-height: 28px;
+
+  @include breakpoint-xs-only {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
