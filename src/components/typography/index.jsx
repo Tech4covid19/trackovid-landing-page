@@ -18,7 +18,9 @@ const Typography = ({
     otherClass
   );
 
-  const TextComponent = ["h1", "h2", "h3"].includes(variant) ? variant : "p";
+  const TextComponent = ["h1", "h2", "h3", "ul"].includes(variant)
+    ? variant
+    : "p";
 
   return <TextComponent className={className}>{children}</TextComponent>;
 };
@@ -36,6 +38,7 @@ Typography.propTypes = {
     "smallCta",
     "largeCta",
     "number",
+    "ul",
   ]),
   weight: PropTypes.oneOf(["regular", "medium", "bold"]),
   color: PropTypes.oneOf([

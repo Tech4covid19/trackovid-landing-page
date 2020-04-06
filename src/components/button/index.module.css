@@ -17,6 +17,13 @@
   }
 }
 
+.textLink {
+  display: inline;
+  font-weight: 700;
+  color: $black;
+  text-decoration: underline;
+}
+
 .outline {
   padding: 8px 19px;
   color: $orange;

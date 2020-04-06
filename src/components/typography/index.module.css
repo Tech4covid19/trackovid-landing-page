@@ -41,7 +41,8 @@
   line-height: $line-height-medium-body;
 }
 
-.small-body {
+.small-body,
+.ul {
   font-size: $font-size-small-body;
   line-height: $line-height-small-body;
 }
@@ -52,6 +53,19 @@
   strong,
   b {
     font-weight: $font-weight-bold;
+  }
+}
+
+.ul {
+  padding-left: 32px;
+  list-style: disc;
+
+  @include breakpoint-xs-only {
+    padding-left: 24px;
+  }
+
+  li {
+    padding-top: 16px;
   }
 }
 
