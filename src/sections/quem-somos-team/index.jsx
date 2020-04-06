@@ -133,7 +133,7 @@ const query = graphql`
 const QuemSomosTeam = () => {
   const data = useStaticQuery(query);
   return (
-    <div className={styles.root} id="equipa">
+    <div className={styles.root}>
       <div className={styles.container}>
         <div className={styles.header}>
           <Typography
