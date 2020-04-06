@@ -62,9 +62,6 @@
 }
 
 .movementText {
-  font-size: 20px;
-  line-height: 120%;
-
   @include breakpoint-mobile-only {
     font-size: 18px;
     line-height: 115%;

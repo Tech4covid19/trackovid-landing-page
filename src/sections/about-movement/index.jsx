@@ -64,7 +64,7 @@ const AboutMovement = () => {
 
         <div className={styles.movementTextWrapper}>
           <Typography
-            variant="smallBody"
+            variant="body"
             weight="bold"
             className={styles.movementText}
           >
