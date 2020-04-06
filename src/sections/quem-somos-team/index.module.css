@@ -3,12 +3,24 @@
 .root {
   padding: 96px 0;
   background: $white;
+
+  @include breakpoint-mobile-only {
+    padding: 72px 0;
+  }
+
+  @include breakpoint-xs-only {
+    padding: 56px 0;
+  }
 }
 
 .container {
   max-width: 1176px;
   padding: 0 24px;
   margin: 0 auto;
+
+  @include breakpoint-xs-only {
+    padding: 0 36px;
+  }
 }
 
 .header {
@@ -25,20 +37,79 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 80px;
+
+  @include breakpoint-xs-only {
+    width: 100%;
+    margin-top: 56px;
+  }
 }
 
 .teamContainer {
   margin-right: 72px;
   margin-bottom: 80px;
+
+  @include breakpoint-mobile-only {
+    margin-right: 56px;
+    margin-bottom: 56px;
+  }
+
+  @include breakpoint-xs-only {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
 }
 
 .team {
   display: flex;
   flex-wrap: wrap;
+
+  @include breakpoint-xs-only {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 }
 
 .person {
   width: 183px;
   margin-top: 32px;
   text-align: center;
+}
+
+.personText {
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  max-width: 602px;
+  margin: 0 auto;
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.heart {
+  flex: 0 0 30px;
+  height: 30px;
+  margin: 0 32px 0;
+
+  @include breakpoint-mobile-only {
+    margin: 32px 0 16px;
+  }
+}
+
+.footerText {
+  font-size: 18px;
+  line-height: 23px;
+
+  @include breakpoint-mobile-only {
+    text-align: center;
+  }
 }

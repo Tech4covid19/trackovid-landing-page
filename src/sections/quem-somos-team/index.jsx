@@ -3,6 +3,8 @@ import Img from "gatsby-image";
 import Typography from "@/components/typography";
 import { useStaticQuery, graphql } from "gatsby";
 
+import heart from "@/assets/heart.svg";
+
 import styles from "./index.module.css";
 
 const query = graphql`
@@ -128,7 +130,7 @@ const query = graphql`
 const QuemSomosTeam = () => {
   const data = useStaticQuery(query);
   return (
-    <div className={styles.root}>
+    <div className={styles.root} id="equipa">
       <div className={styles.container}>
         <div className={styles.header}>
           <Typography
@@ -160,14 +162,24 @@ const QuemSomosTeam = () => {
                   fixed={data.ruiCosta.childImageSharp.fixed}
                   alt="Rui Costa"
                 />
-                <Typography>Rui Costa</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Rui Costa
+                </Typography>
+                <Typography className={styles.personText}>
+                  Produto e Estratégia
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.pedroFortuna.childImageSharp.fixed}
                   alt="Pedro Fortuna"
                 />
-                <Typography>Pedro Fortuna</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Pedro Fortuna
+                </Typography>
+                <Typography className={styles.personText}>
+                  Produto e Estratégia
+                </Typography>
               </div>
             </div>
           </div>
@@ -182,14 +194,24 @@ const QuemSomosTeam = () => {
                   fixed={data.luisBorges.childImageSharp.fixed}
                   alt="Luís Borges"
                 />
-                <Typography>Luís Borges</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Luís Borges
+                </Typography>
+                <Typography className={styles.personText}>
+                  Desenvolvimento
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.ricardoFernandes.childImageSharp.fixed}
                   alt="Ricardo Fernandes"
                 />
-                <Typography>Ricardo Fernandes</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Ricardo Fernandes
+                </Typography>
+                <Typography className={styles.personText}>
+                  Desenvolvimento
+                </Typography>
               </div>
             </div>
           </div>
@@ -204,7 +226,12 @@ const QuemSomosTeam = () => {
                   fixed={data.pauloCunha.childImageSharp.fixed}
                   alt="Paulo Cunha"
                 />
-                <Typography>Paulo Cunha</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Paulo Cunha
+                </Typography>
+                <Typography className={styles.personText}>
+                  Infraestrutura e legal
+                </Typography>
               </div>
             </div>
           </div>
@@ -219,11 +246,17 @@ const QuemSomosTeam = () => {
                   fixed={data.orlandoRocha.childImageSharp.fixed}
                   alt="Orlando Rocha"
                 />
-                <Typography>Orlando Rocha</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Orlando Rocha
+                </Typography>
+                <Typography className={styles.personText}>UX e UI</Typography>
               </div>
               <div className={styles.person}>
                 <Img fixed={data.geiras.childImageSharp.fixed} alt="Geiras" />
-                <Typography>Geiras</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Geiras
+                </Typography>
+                <Typography className={styles.personText}>UX e UI</Typography>
               </div>
             </div>
           </div>
@@ -238,7 +271,10 @@ const QuemSomosTeam = () => {
                   fixed={data.joaoQuartilho.childImageSharp.fixed}
                   alt="João Quartilho"
                 />
-                <Typography>João Quartilho</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  João Quartilho
+                </Typography>
+                <Typography className={styles.personText}>Legal</Typography>
               </div>
             </div>
           </div>
@@ -253,91 +289,152 @@ const QuemSomosTeam = () => {
                   fixed={data.carmenLima.childImageSharp.fixed}
                   alt="Carmen Lima"
                 />
-                <Typography>Carmen Lima</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Carmen Lima
+                </Typography>
+                <Typography className={styles.personText}>
+                  Marketing Coord.
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.teresaPenetra.childImageSharp.fixed}
                   alt="Teresa Penetra"
                 />
-                <Typography>Teresa Penetra</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Teresa Penetra
+                </Typography>
+                <Typography className={styles.personText}>
+                  Social Media, VIP’s
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.pedroDias.childImageSharp.fixed}
                   alt="Pedro Dias"
                 />
-                <Typography>Pedro Dias</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Pedro Dias
+                </Typography>
+                <Typography className={styles.personText}>
+                  Social Media
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.joaoEsteves.childImageSharp.fixed}
                   alt="Joao Esteves"
                 />
-                <Typography>Joao Esteves</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Joao Esteves
+                </Typography>
+                <Typography className={styles.personText}>
+                  Design e Prod.
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.brunoPiao.childImageSharp.fixed}
                   alt="Bruno Pião"
                 />
-                <Typography>Bruno Pião</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Bruno Pião
+                </Typography>
+                <Typography className={styles.personText}>
+                  Estratégia e Prod.
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.martaTorre.childImageSharp.fixed}
                   alt="Marta Torre"
                 />
-                <Typography>Marta Torre</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Marta Torre
+                </Typography>
+                <Typography className={styles.personText}>
+                  Estratégia e copy
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.martaCarrilho.childImageSharp.fixed}
                   alt="Marta Carrilho"
                 />
-                <Typography>Marta Carrilho</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Marta Carrilho
+                </Typography>
+                <Typography className={styles.personText}>
+                  Copywriter
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.brunoBarbosa.childImageSharp.fixed}
                   alt="Bruno Barbosa"
                 />
-                <Typography>Bruno Barbosa</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Bruno Barbosa
+                </Typography>
+                <Typography className={styles.personText}>Consultor</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.pedroRoque.childImageSharp.fixed}
                   alt="Pedro Roque"
                 />
-                <Typography>Pedro Roque</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Pedro Roque
+                </Typography>
+                <Typography className={styles.personText}>Consultor</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.joaoDias.childImageSharp.fixed}
                   alt="João Dias"
                 />
-                <Typography>João Dias</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  João Dias
+                </Typography>
+                <Typography className={styles.personText}>
+                  Videos e Media
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.brunoSalomao.childImageSharp.fixed}
                   alt="Bruno Salomão"
                 />
-                <Typography>Bruno Salomão</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Bruno Salomão
+                </Typography>
+                <Typography className={styles.personText}>
+                  Influencers
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.margaridaSilva.childImageSharp.fixed}
                   alt="Margarida Silva"
                 />
-                <Typography>Margarida Silva</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Margarida Silva
+                </Typography>
+                <Typography className={styles.personText}>
+                  Influencers
+                </Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.nelsonPatricio.childImageSharp.fixed}
                   alt="Nélson Patrício"
                 />
-                <Typography>Nélson Patrício</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Nélson Patrício
+                </Typography>
+                <Typography className={styles.personText}>
+                  Influencers
+                </Typography>
               </div>
             </div>
           </div>
@@ -352,66 +449,105 @@ const QuemSomosTeam = () => {
                   fixed={data.fabioSilva.childImageSharp.fixed}
                   alt="Fábio Silva"
                 />
-                <Typography>Fábio Silva</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Fábio Silva
+                </Typography>
+                <Typography className={styles.personText}>FrontEnd</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.diogoTeixeira.childImageSharp.fixed}
                   alt="Diogo Teixeira"
                 />
-                <Typography>Diogo Teixeira</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Diogo Teixeira
+                </Typography>
+                <Typography className={styles.personText}>FrontEnd</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.nunoMota.childImageSharp.fixed}
                   alt="Nuno Mota"
                 />
-                <Typography>Nuno Mota</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Nuno Mota
+                </Typography>
+                <Typography className={styles.personText}>FrontEnd</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.ruiMendes.childImageSharp.fixed}
                   alt="Rui Mendes"
                 />
-                <Typography>Rui Mendes</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Rui Mendes
+                </Typography>
+                <Typography className={styles.personText}>FrontEnd</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.ruiSaraiva.childImageSharp.fixed}
                   alt="Rui Saraiva"
                 />
-                <Typography>Rui Saraiva</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Rui Saraiva
+                </Typography>
+                <Typography className={styles.personText}>FrontEnd</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.carlosPombeiro.childImageSharp.fixed}
                   alt="Carlos Pombeiro"
                 />
-                <Typography>Carlos Pombeiro</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Carlos Pombeiro
+                </Typography>
+                <Typography className={styles.personText}>BackEnd</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.joaoDuarte.childImageSharp.fixed}
                   alt="João Duarte"
                 />
-                <Typography>João Duarte</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  João Duarte
+                </Typography>
+                <Typography className={styles.personText}>BackEnd</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.miguelPinto.childImageSharp.fixed}
                   alt="Miguel Pinto"
                 />
-                <Typography>Miguel Pinto</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Miguel Pinto
+                </Typography>
+                <Typography className={styles.personText}>BackEnd</Typography>
               </div>
               <div className={styles.person}>
                 <Img
                   fixed={data.ricardoVallejo.childImageSharp.fixed}
                   alt="Ricardo Vallejo"
                 />
-                <Typography>Ricardo Vallejo</Typography>
+                <Typography weight="bold" className={styles.personText}>
+                  Ricardo Vallejo
+                </Typography>
+                <Typography className={styles.personText}>Mobile</Typography>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className={styles.footer}>
+          <img className={styles.heart} src={heart} alt="Heart" />
+          <Typography
+            variant="smallBody"
+            weight="bold"
+            className={styles.footerText}
+          >
+            A todos os outros voluntários que já contribuíram para o projeto, o
+            nosso muito obrigado.
+          </Typography>
         </div>
       </div>
     </div>

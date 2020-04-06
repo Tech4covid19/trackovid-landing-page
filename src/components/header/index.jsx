@@ -70,6 +70,14 @@ export default function Header({ onlyShowLogoWhenSticky }) {
               </Typography>
             </Link>
             <Link
+              to="/quem-somos"
+              className={classNames(styles.link, styles.hideMobile)}
+            >
+              <Typography variant="smallCta" weight="bold">
+                Quem somos
+              </Typography>
+            </Link>
+            <Link
               to="/privacidade"
               className={classNames(styles.link, styles.hideMobile)}
             >
