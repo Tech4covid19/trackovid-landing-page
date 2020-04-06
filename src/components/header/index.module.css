@@ -37,13 +37,13 @@
   margin: 0 auto;
 
   @include breakpoint-mobile-only {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 }
 
 .logo {
+  display: block;
   height: 40px;
-  opacity: 1;
   transition: opacity 0.18s ease;
 
   img {
@@ -51,13 +51,21 @@
   }
 }
 
-.hideLogo {
-  opacity: 0;
+.hideDesktop {
+  @include breakpoint-desktop-only {
+    display: none;
+  }
 }
 
 .nav {
   display: flex;
   align-items: center;
+}
+
+.nav.supportPage {
+  @include breakpoint-mobile-only {
+    display: none;
+  }
 }
 
 .link {
@@ -84,8 +92,10 @@
   }
 }
 
-.hideHeaderLinks {
-  display: none;
+.hideLandingMobile {
+  @include breakpoint-mobile-only {
+    display: none;
+  }
 }
 
 .hideMobile {

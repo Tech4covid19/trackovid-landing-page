@@ -37,70 +37,74 @@ const useWindowScroll = () => {
   return scrollY;
 };
 
-export default function Header({ onlyShowLogoWhenSticky, showMenu }) {
+export default function Header({ isLandingPage }) {
   const data = useStaticQuery(query);
   const scrollY = useWindowScroll();
   const isSticky = scrollY >= 10;
   const className = classNames(styles.root, {
     [styles.sticky]: isSticky,
   });
-  const hideLogo = (onlyShowLogoWhenSticky && !isSticky) || !showMenu;
-  const hideLogoMobile = !showMenu;
-  const hideHeaderLinks = showMenu;
-  console.log(hideLogo);
   return (
     <Sticky>
       <header className={className}>
         <div className={styles.inner}>
-          <Menu showMenu={showMenu} />
+          <Menu isLandingPage={isLandingPage} />
           <Link
             to="/"
             className={classNames(styles.logo, {
-              [styles.hideLogo]: hideLogo,
-              [styles.hideMobile]: hideLogoMobile,
+              [styles.hideMobile]: isLandingPage,
+              [styles.hideDesktop]: isLandingPage,
             })}
           >
             <img src={logo} alt={data.site.siteMetadata.title} />
           </Link>
-          <div
-            className={classNames(styles.nav, {
-              [styles.hideHeaderLinks]: hideHeaderLinks,
-            })}
-          >
-            <Link to="/#para-que-serve" className={styles.link}>
-              <Typography variant="smallCta" weight="bold">
-                Para que serve?
-              </Typography>
-            </Link>
-            <Link to="/#como-usar" className={styles.link}>
-              <Typography variant="smallCta" weight="bold">
-                Como usar?
-              </Typography>
-            </Link>
-            <Link
-              to="/quem-somos"
-              className={classNames(styles.link, styles.hideMobile)}
+          <div className={styles.nav}>
+            <nav
+              className={classNames(styles.nav, {
+                [styles.hideMobile]: !isLandingPage,
+              })}
             >
-              <Typography variant="smallCta" weight="bold">
-                Quem somos
-              </Typography>
-            </Link>
-            <Link
-              to="/privacidade"
-              className={classNames(styles.link, styles.hideMobile)}
-            >
-              <Typography variant="smallCta" weight="bold">
-                Privacidade
-              </Typography>
-            </Link>
-            <Link
-              to="/perguntas-frequentes"
-              className={classNames(styles.link, styles.hideMobile)}
-            >
-              <Typography variant="smallCta" weight="bold">
-                Perguntas frequentes
-              </Typography>
-            </Link>
+              <Link to="/#para-que-serve" className={styles.link}>
+                <Typography variant="smallCta" weight="bold">
+                  Para que serve?
+                </Typography>
+              </Link>
+              <Link to="/#como-usar" className={styles.link}>
+                <Typography variant="smallCta" weight="bold">
+                  Como usar?
+                </Typography>
+              </Link>
+              <Link
+                to="/quem-somos"
+                className={classNames(styles.link, {
+                  [styles.hideMobile]: isLandingPage,
+                })}
+              >
+                <Typography variant="smallCta" weight="bold">
+                  Quem somos
+                </Typography>
+              </Link>
+              <Link
+                to="/privacidade"
+                className={classNames(styles.link, {
+                  [styles.hideMobile]: isLandingPage,
+                })}
+              >
+                <Typography variant="smallCta" weight="bold">
+                  Privacidade
+                </Typography>
+              </Link>
+              <Link
+                to="/perguntas-frequentes"
+                className={classNames(styles.link, {
+                  [styles.hideMobile]: isLandingPage,
+                })}
+              >
+                <Typography variant="smallCta" weight="bold">
+                  Perguntas frequentes
+                </Typography>
+              </Link>
+            </nav>
             <Button href={data.site.siteMetadata.appSiteUrl} type="outline">
               <Typography variant="smallCta" weight="bold" color="orange">
                 Login
@@ -114,11 +118,9 @@ export default function Header({ onlyShowLogoWhenSticky, showMenu }) {
 }
 
 Header.propTypes = {
-  onlyShowLogoWhenSticky: PropTypes.bool,
-  showMenu: PropTypes.bool,
+  isLandingPage: PropTypes.bool,
 };
 
 Header.defaultProps = {
-  onlyShowLogoWhenSticky: false,
-  showMenu: false,
+  isLandingPage: false,
 };

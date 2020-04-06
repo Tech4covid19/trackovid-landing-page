@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
 import classNames from "classnames";
 
 import hamburguer from "@/assets/hamburguer.svg";
@@ -8,9 +7,9 @@ import closeMenu from "@/assets/close-menu.svg";
 
 import styles from "./index.module.css";
 
-export default function Menu({ showMenu }) {
+export default function Menu({ hideLandingMobile }) {
   const className = classNames(styles.root, styles.menu, styles.hideDesktop, {
-    [styles.hideMenu]: !showMenu,
+    [styles.hideLandingMobile]: hideLandingMobile,
   });
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -20,15 +19,19 @@ export default function Menu({ showMenu }) {
       type="button"
       onClick={() => setMenuOpen(!menuOpen)}
     >
-      <img src={menuOpen ? closeMenu : hamburguer} alt="Menu" />
+      <img
+        className={styles.hamburguer}
+        src={menuOpen ? closeMenu : hamburguer}
+        alt="Menu"
+      />
     </button>
   );
 }
 
 Menu.propTypes = {
-  showMenu: PropTypes.bool,
+  hideLandingMobile: PropTypes.bool,
 };
 
 Menu.defaultProps = {
-  showMenu: false,
+  hideLandingMobile: false,
 };
