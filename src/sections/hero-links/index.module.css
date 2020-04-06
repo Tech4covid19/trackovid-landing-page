@@ -1,0 +1,24 @@
+@import "../../styles/all.module.css";
+
+.root {
+  padding: 32px;
+
+  @include breakpoint-tablet-and-above {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.container > * {
+  flex: 1 1 0;
+}
+
+.privacidade {
+  padding: 0 24px;
+}

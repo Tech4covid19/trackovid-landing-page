@@ -4,6 +4,10 @@
   @extend %font-family;
 
   display: inline-block;
+
+  p {
+    transition: color 0.18s ease;
+  }
 }
 
 .link {
@@ -17,6 +21,27 @@
   }
 }
 
+.textLink {
+  display: inline;
+  font-weight: 700;
+  color: $black;
+  text-decoration: underline;
+}
+
+.purpleLink {
+  display: inline;
+  font-weight: 700;
+  color: $purple;
+  text-decoration: underline;
+}
+
+.sectionLink {
+  display: inline;
+  font-weight: 700;
+  color: $purple;
+  text-decoration: underline;
+}
+
 .outline {
   padding: 8px 19px;
   color: $orange;
@@ -25,10 +50,6 @@
   border: 1px solid $orange;
   border-radius: 16px;
   transition: all 0.18s ease;
-
-  p {
-    transition: color 0.18s ease;
-  }
 
   &:hover {
     color: $white;
@@ -54,5 +75,24 @@
     text-decoration: none;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(250, 100, 0, 0.24),
       0 10px 20px rgba(250, 100, 0, 0.3);
+  }
+}
+
+.ctaTransparent {
+  padding: 16px 38px;
+  color: $orange;
+  background: transparent;
+  border: 2px solid $orange;
+  border-radius: 27px;
+  transition: all 0.18s ease;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    background: $orange;
+
+    p {
+      color: $white;
+    }
   }
 }

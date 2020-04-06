@@ -7,6 +7,9 @@ import Hero from "@/sections/hero";
 import Footer from "@/components/footer";
 import ParaQueServe from "@/sections/para-que-serve";
 import ComoUsar from "@/sections/como-usar";
+import LandingQuemSomos from "@/sections/landing-quem-somos";
+import PorqueOFazemos from "@/sections/porque-o-fazemos";
+import HeroLinks from "@/sections/hero-links";
 
 import "@/styles/main.module.css";
 
@@ -14,11 +17,14 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO />
-      <Header />
+      <Header isLandingPage />
       <Hero />
+      <HeroLinks />
       <ParaQueServe />
       <ComoUsar />
-      <Footer />
+      <PorqueOFazemos />
+      <LandingQuemSomos />
+      <Footer color="gray" />
     </Layout>
   );
 };

@@ -1,22 +1,22 @@
 @import "../../styles/all.module.css";
 
 .root {
-  padding: 34px 24px;
+  padding: 30px 24px;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0);
   transition: all 0.18s ease;
 
   @include breakpoint-mobile-only {
-    padding: 24px;
+    padding: 20px 24px;
   }
 
   @media screen and (width < 360px) {
-    padding: 24px 16px;
+    padding: 20px 16px;
   }
 }
 
 .sticky {
-  padding: 16px 24px;
+  padding: 12px 24px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
 
@@ -32,9 +32,40 @@
 .inner {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  max-width: 1110px;
+  justify-content: space-between;
+  max-width: 1184px;
   margin: 0 auto;
+
+  @include breakpoint-mobile-only {
+    justify-content: space-between;
+  }
+}
+
+.isLandingPage {
+  .inner {
+    justify-content: flex-end;
+  }
+}
+
+.logo {
+  height: 40px;
+  opacity: 1;
+  transition: opacity 0.18s ease;
+
+  img {
+    height: 40px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  height: 1000px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .link {
@@ -47,16 +78,64 @@
   }
 
   p {
-    color: $black;
     transition: color 0.18s ease;
   }
 
   &:hover {
     color: black;
     text-decoration: underline;
-
-    p {
-      color: black;
-    }
   }
+}
+
+.navSecondary {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 24px;
+  background: #f8fafb;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04),
+    0 10px 20px rgba(0, 0, 0, 0.04);
+
+  a {
+    margin: 16px;
+  }
+
+  p {
+    flex: none;
+    align-self: center;
+    order: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    color: #798794;
+    text-align: center;
+  }
+}
+
+.hideDesktop {
+  @include breakpoint-tablet-and-above {
+    display: none;
+  }
+}
+
+.hideMobile {
+  @include breakpoint-mobile-only {
+    display: none;
+  }
+}
+
+.menu {
+  padding: 0;
+  font-size: 0;
+  background: transparent;
+
+  .hamburguer {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.menuClosed {
+  display: none;
 }

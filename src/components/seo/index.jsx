@@ -28,9 +28,11 @@ function SEO({ title, description, keywords }) {
     keywords: siteKeywords,
   } = data.site.siteMetadata;
 
+  const customTitle = title ? `${title} - ${siteTitle}` : "";
+
   return (
     <Helmet>
-      <title>{title || siteTitle}</title>
+      <title>{customTitle || siteTitle}</title>
       <meta name="description" content={description || siteDescription} />
       <meta name="keywords" content={keywords || siteKeywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,7 +40,7 @@ function SEO({ title, description, keywords }) {
       <link rel="icon" type="image/x-icon" href="favicon.ico" />
       <meta name="language" content="pt-pt" />
       <meta name="author" content={author} />
-      <meta property="og:title" content={title || siteTitle} />
+      <meta property="og:title" content={customTitle || siteTitle} />
       <meta
         property="og:description"
         content={description || siteDescription}

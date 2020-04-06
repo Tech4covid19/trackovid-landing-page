@@ -1,0 +1,104 @@
+@import "../../styles/all.module.css";
+
+.root {
+  background: $light-gray;
+}
+
+.container {
+  max-width: 988px;
+  padding: 160px 24px 58px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include breakpoint-mobile-only {
+    padding: 100px 36px 58px;
+  }
+}
+
+.header {
+  max-width: 732px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 82px;
+  line-height: 94px;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    font-size: 62px;
+    line-height: 71px;
+  }
+
+  @include breakpoint-xs-only {
+    font-size: 48px;
+    line-height: 55px;
+  }
+}
+
+.text {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.conductCode {
+  padding: 16px 32px;
+  margin: 32px 0 24px;
+  text-align: center;
+  background: rgba(255, 184, 184, 0.2);
+  border-radius: 8px;
+}
+
+.mission {
+  margin: 72px 0;
+
+  @include breakpoint-mobile-only {
+    margin: 56px 0;
+  }
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.column {
+  width: 100%;
+  max-width: 250px;
+
+  @include breakpoint-mobile-only {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.image {
+  height: 184px;
+  margin-bottom: 16px;
+}
+
+.imageText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
+
+.author {
+  margin-top: 72px;
+  text-align: center;
+}
+
+.authorLink {
+  img {
+    height: 48px;
+  }
+}
