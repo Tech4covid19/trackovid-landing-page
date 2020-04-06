@@ -11,7 +11,7 @@
   overflow: hidden;
 
   @include breakpoint-mobile-only {
-    padding: 56px 36px;
+    padding: 100px 36px 58px;
   }
 }
 
@@ -25,6 +25,16 @@
   font-size: 82px;
   line-height: 94px;
   text-align: center;
+
+  @include breakpoint-mobile-only {
+    font-size: 62px;
+    line-height: 71px;
+  }
+
+  @include breakpoint-xs-only {
+    font-size: 48px;
+    line-height: 55px;
+  }
 }
 
 .text {
@@ -33,7 +43,7 @@
 }
 
 .conductCode {
-  padding: 16px 0;
+  padding: 16px 32px;
   margin: 32px 0 24px;
   text-align: center;
   background: rgba(255, 184, 184, 0.2);
@@ -42,6 +52,10 @@
 
 .mission {
   margin: 72px 0;
+
+  @include breakpoint-mobile-only {
+    margin: 56px 0;
+  }
 }
 
 .columns {

@@ -63,7 +63,7 @@ const QuemSomosHero = () => {
               className={styles.text}
             >
               Lê primeiro o nosso{" "}
-              <Button href="/quem-somos/#" type="purpleLink">
+              <Button href="/codigo-conduta" type="purpleLink">
                 Código de Conduta
               </Button>
               .

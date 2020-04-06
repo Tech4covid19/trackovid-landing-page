@@ -1,0 +1,101 @@
+@import "../../styles/all.module.css";
+
+.root {
+  padding: 72px 0;
+  background: $white;
+  background: radial-gradient(
+      86.23% 167.21% at 22.7% 9.25%,
+      rgba(107, 104, 252, 0.1) 0%,
+      rgba(251, 101, 1, 0.1) 100%
+    ),
+    $white;
+
+  @include breakpoint-mobile-only {
+    padding: 56px 0;
+  }
+}
+
+.container {
+  max-width: 902px;
+  padding: 0 24px;
+  margin: 0 auto;
+
+  @include breakpoint-mobile-only {
+    padding: 0 36px;
+  }
+}
+
+.title {
+  font-size: 29px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.socialNetworks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 728px;
+  margin: 32px auto 0;
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+.socialNetwork {
+  display: flex;
+  align-items: center;
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+    margin-top: 32px;
+  }
+}
+
+.socialNetworkImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+  margin-right: 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(66, 103, 178, 0.12),
+    0 10px 20px rgba(66, 103, 178, 0.18);
+
+  @include breakpoint-mobile-only {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.socialNetworkText {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: -0.02em;
+}
+
+.facebook {
+  background: #4267b2;
+}
+
+.twitter {
+  background: #2aa3ef;
+}
+
+.instagram {
+  background: #c13584;
+}
+
+.linkedin {
+  background: #1178b3;
+}

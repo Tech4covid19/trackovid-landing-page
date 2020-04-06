@@ -1,8 +1,12 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import Typography from "@/components/typography";
 import Button from "@/components/button";
-import { useStaticQuery, graphql } from "gatsby";
-import SectionContent from "../section-content/index";
+
+import saveLives from "@/assets/saving-lives.svg";
+import reduceEconomicalImpact from "@/assets/reduce-the-economical-impact.svg";
+import protectOurWayOfLiving from "@/assets/protect-our-way-of-living.svg";
+import SectionContent from "../section-content";
 
 import styles from "./index.module.css";
 
@@ -20,6 +24,66 @@ export default function CodigoConduta() {
   const data = useStaticQuery(query);
   return (
     <div className={styles.root}>
+      <div className={styles.missionContainer}>
+        <div className={styles.mission}>
+          <Typography
+            variant="smallBody"
+            color="purple"
+            weight="bold"
+            className={styles.text}
+          >
+            A nossa missão é reduzir o impacto da pandemia COVID-19,
+            contribuindo para:
+          </Typography>
+        </div>
+        <div className={styles.columns}>
+          <div className={styles.column}>
+            <div className={styles.image}>
+              <img src={saveLives} alt="Salvar vidas" />
+            </div>
+            <div className={styles.imageText}>
+              <Typography weight="bold">Salvar vidas</Typography>
+            </div>
+          </div>
+          <div className={styles.column}>
+            <div className={styles.image}>
+              <img
+                src={reduceEconomicalImpact}
+                alt="Reduzir o impacto económico"
+              />
+            </div>
+            <div className={styles.imageText}>
+              <Typography weight="bold">
+                Reduzir o <br /> impacto económico
+              </Typography>
+            </div>
+          </div>
+          <div className={styles.column}>
+            <div className={styles.image}>
+              <img
+                src={protectOurWayOfLiving}
+                alt="Proteger o nosso modo de vida"
+              />
+            </div>
+            <div className={styles.imageText}>
+              <Typography weight="bold">
+                Proteger o <br /> nosso modo de vida
+              </Typography>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Typography
+            variant="smallBody"
+            color="purple"
+            weight="bold"
+            className={styles.text}
+          >
+            Para que tal aconteça, consideramos ser ser fundamental que
+            respeites o seguinte código de conduta:
+          </Typography>
+        </div>
+      </div>
       <div className={styles.container}>
         <SectionContent title="Pensar primeiro na privacidade e segurança de informação">
           <Typography variant="smallBody">

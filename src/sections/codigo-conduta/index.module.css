@@ -4,9 +4,9 @@
   background: $white;
 }
 
-.container {
-  max-width: 620px;
-  padding: 102px 54px;
+.missionContainer {
+  max-width: 988px;
+  padding: 102px 24px 0;
   margin: 0 auto;
 
   @include breakpoint-mobile-only {
@@ -18,6 +18,65 @@
   }
 }
 
+.container {
+  max-width: 620px;
+  padding: 0 54px 102px;
+  margin: 0 auto;
+
+  @include breakpoint-mobile-only {
+    padding: 0 36px;
+  }
+}
+
 li {
   font-weight: bold;
+}
+
+.text {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    margin-bottom: 56px;
+  }
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+}
+
+.column {
+  width: 100%;
+  max-width: 250px;
+
+  @include breakpoint-mobile-only {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.image {
+  height: 184px;
+  margin-bottom: 16px;
+}
+
+.imageText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
 }

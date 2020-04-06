@@ -1,0 +1,81 @@
+@import "../../styles/all.module.css";
+
+.root {
+  padding: 102px 24px;
+  background: $light-gray;
+
+  @include breakpoint-mobile-only {
+    padding: 72px 36px;
+  }
+
+  @include breakpoint-xs-only {
+    padding: 56px 36px;
+  }
+}
+
+.container {
+  max-width: 902px;
+  margin: 0 auto;
+}
+
+.author {
+  height: 48px;
+  text-align: center;
+
+  img {
+    height: 48px;
+  }
+}
+
+.title {
+  margin: 48px 0;
+  font-size: $font-size-h1;
+  line-height: $line-height-h1;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    font-size: $font-size-h1-mobile;
+  }
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04),
+    0 16px 24px rgba(0, 0, 0, 0.06);
+}
+
+.movementTextWrapper {
+  max-width: 732px;
+  margin: 48px auto 0;
+}
+
+.movementText {
+  font-size: 20px;
+  line-height: 120%;
+
+  @include breakpoint-mobile-only {
+    font-size: 18px;
+    line-height: 115%;
+  }
+}
+
+.knowMore {
+  margin-top: 72px;
+  text-align: center;
+
+  @include breakpoint-mobile-only {
+    margin-top: 56px;
+  }
+}
