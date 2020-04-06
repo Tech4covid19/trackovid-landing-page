@@ -9,6 +9,7 @@ import ParaQueServe from "@/sections/para-que-serve";
 import ComoUsar from "@/sections/como-usar";
 import LandingQuemSomos from "@/sections/landing-quem-somos";
 import PorqueOFazemos from "@/sections/porque-o-fazemos";
+import HeroLinks from "@/sections/hero-links";
 
 import "@/styles/main.module.css";
 
@@ -18,6 +19,7 @@ const IndexPage = () => {
       <SEO />
       <Header onlyShowLogoWhenSticky />
       <Hero />
+      <HeroLinks />
       <ParaQueServe />
       <ComoUsar />
       <PorqueOFazemos />
