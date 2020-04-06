@@ -4,6 +4,13 @@
   @extend %font-family;
 
   padding: 32px 0;
+}
+
+.gray {
+  background-color: $light-gray;
+}
+
+.white {
   background-color: $white;
 }
 

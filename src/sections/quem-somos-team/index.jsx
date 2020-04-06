@@ -117,6 +117,9 @@ const query = graphql`
     ) {
       ...AvatarData
     }
+    taniaRocha: file(relativePath: { eq: "team/avatar-tania-rocha.png" }) {
+      ...AvatarData
+    }
   }
   fragment AvatarData on File {
     childImageSharp {
@@ -491,6 +494,16 @@ const QuemSomosTeam = () => {
                 />
                 <Typography weight="bold" className={styles.personText}>
                   Rui Saraiva
+                </Typography>
+                <Typography className={styles.personText}>FrontEnd</Typography>
+              </div>
+              <div className={styles.person}>
+                <Img
+                  fixed={data.taniaRocha.childImageSharp.fixed}
+                  alt="Tânia Rocha"
+                />
+                <Typography weight="bold" className={styles.personText}>
+                  Tânia Rocha
                 </Typography>
                 <Typography className={styles.personText}>FrontEnd</Typography>
               </div>

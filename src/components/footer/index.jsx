@@ -1,9 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import heart from "@/assets/heart.svg";
 import tech4covid19 from "@/assets/tech4covid19-logo.svg";
 import email from "@/assets/email.svg";
 import Typography from "@/components/typography";
+import classNames from "classnames";
 
 import styles from "./index.module.css";
 
@@ -18,10 +20,11 @@ const query = graphql`
   }
 `;
 
-export default function Footer() {
+function Footer({ color }) {
+  const className = classNames(styles.footer, [styles[color]]);
   const data = useStaticQuery(query);
   return (
-    <div className={styles.footer}>
+    <div className={className}>
       <div className={styles.row}>
         <img className={styles.email} src={email} alt="email" />
         <a href="mailto:info@covidografia.pt" className={styles.emailLink}>
@@ -65,3 +68,13 @@ export default function Footer() {
     </div>
   );
 }
+
+Footer.propTypes = {
+  color: PropTypes.oneOf(["gray", "white"]),
+};
+
+Footer.defaultProps = {
+  color: "white",
+};
+
+export default Footer;

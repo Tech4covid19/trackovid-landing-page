@@ -16,7 +16,7 @@ const PrivacidadePage = () => {
       <Header />
       <SimpleHero title="Como são os seus dados protegidos" />
       <Privacidade />
-      <Footer />
+      <Footer color="gray" />
     </Layout>
   );
 };
