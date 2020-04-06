@@ -16,7 +16,7 @@ const CodigoCondutaPage = () => {
       <Header />
       <SimpleHero title="Código de Conduta" date="5 de abril de 2020" />
       <CodigoConduta />
-      <Footer />
+      <Footer color="gray" />
     </Layout>
   );
 };

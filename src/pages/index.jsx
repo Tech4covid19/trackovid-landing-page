@@ -24,7 +24,7 @@ const IndexPage = () => {
       <ComoUsar />
       <PorqueOFazemos />
       <LandingQuemSomos />
-      <Footer />
+      <Footer color="gray" />
     </Layout>
   );
 };
