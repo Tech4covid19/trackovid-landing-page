@@ -91,6 +91,7 @@ export default function CodigoConduta() {
             tudo o que faças, desde software ao marketing, tenha sempre como
             prioridade número um a privacidade e segurança da informação
             fornecida pelos utilizadores. <br />
+            <br />
             Isso poderá trazer inconvenientes, que aceitarás, como por exemplo
             não teres acesso aos dados submetidos, ou a ter trabalho extra para
             implementar passos necessários no software que garantam anonimização
@@ -155,6 +156,7 @@ export default function CodigoConduta() {
               forma aberta
             </Button>
             .
+            <br />
             <br />
             Crias processos e desenvolves software de maneira a permitir o
             escrutínio total, incluindo sobre como são recolhidos e tratados os
