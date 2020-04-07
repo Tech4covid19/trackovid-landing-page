@@ -14,7 +14,7 @@ const PrivacidadePage = () => {
     <Layout>
       <SEO title="Privacidade" />
       <Header />
-      <SimpleHero title="Como são os seus dados protegidos" />
+      <SimpleHero title="Privacidade dos seus dados" />
       <Privacidade />
       <Footer color="gray" />
     </Layout>
