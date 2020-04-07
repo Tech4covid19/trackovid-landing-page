@@ -43,7 +43,8 @@ const OMeuCodigoPostalPage = ({ location: { pathname } }) => {
     keywords: siteKeywords,
     appImagesUrl,
   } = data.site.siteMetadata;
-  const imageUrl = `${appImagesUrl}/${getParamFromPathname(pathname)}.png`;
+  const imageId = getParamFromPathname(pathname);
+  const imageUrl = `https://${appImagesUrl}/${imageId}.png`;
   checkIfImageExists(imageUrl, () => {
     navigate("/");
   });
