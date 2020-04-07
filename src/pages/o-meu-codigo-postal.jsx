@@ -43,8 +43,7 @@ const OMeuCodigoPostalPage = ({ location: { search } }) => {
     appImagesUrl,
   } = data.site.siteMetadata;
   const { imageId } = queryString.parse(search);
-  const imageUrl = `https://${appImagesUrl}/${imageId}.png`;
-  checkIfImageExists(imageUrl, () => {
+  checkIfImageExists(`https://${appImagesUrl}/${imageId}.png`, () => {
     navigate("/");
   });
   return (
@@ -60,11 +59,16 @@ const OMeuCodigoPostalPage = ({ location: { search } }) => {
         <meta name="author" content={author} />
         <meta property="og:title" content={siteTitle} />
         <meta property="og:description" content={siteDescription} />
-        <meta property="og:image" content={imageUrl} />
+        <meta
+          property="og:image"
+          content={`https://${appImagesUrl}/${imageId}.png`}
+        />
         <meta property="og:image:width" content="476" />
         <meta property="og:image:height" content="714" />
       </Helmet>
-      <CodigoPostal imageUrl={imageUrl} />
+      {imageId && (
+        <CodigoPostal imageUrl={`https://${appImagesUrl}/${imageId}.png`} />
+      )}
     </Layout>
   );
 };
