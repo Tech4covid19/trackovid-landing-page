@@ -11,9 +11,11 @@ import "@/styles/main.module.css";
 const getParamFromPathname = pathname => pathname.split("/").pop();
 
 const checkIfImageExists = (imageUrl, bad) => {
-  const img = new Image();
-  img.onerror = bad;
-  img.src = imageUrl;
+  if (typeof window !== "undefined") {
+    const img = new Image();
+    img.onerror = bad;
+    img.src = imageUrl;
+  }
 };
 
 const query = graphql`
