@@ -42,7 +42,7 @@ const FaqQuemSomos = () => {
           </Typography>
         </div>
         <div className={styles.cta}>
-          <Button href="/quem-somos/#equipa" type="ctaTransparent">
+          <Button href="/quem-somos" type="ctaTransparent">
             <Typography variant="largeCta" color="orange" weight="bold">
               Ver equipa
             </Typography>
