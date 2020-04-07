@@ -9,7 +9,8 @@ import Layout from "@/components/layout";
 import "@/styles/main.module.css";
 
 const getParamFromPathname = pathname => {
-  return pathname.split("/")[3];
+  const parts = pathname.split("/");
+  return parts[parts.length - 2];
 };
 
 const checkIfImageExists = (imageUrl, bad) => {
