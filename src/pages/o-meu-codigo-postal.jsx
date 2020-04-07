@@ -8,7 +8,9 @@ import Layout from "@/components/layout";
 
 import "@/styles/main.module.css";
 
-const getParamFromPathname = pathname => pathname.split("/").pop();
+const getParamFromPathname = pathname => {
+  return pathname.split("/")[3];
+};
 
 const checkIfImageExists = (imageUrl, bad) => {
   if (typeof window !== "undefined") {
