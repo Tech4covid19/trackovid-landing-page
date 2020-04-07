@@ -120,6 +120,14 @@ const query = graphql`
     taniaRocha: file(relativePath: { eq: "team/avatar-tania-rocha.png" }) {
       ...AvatarData
     }
+    fabioFerreira: file(
+      relativePath: { eq: "team/avatar-fabio-ferreira.png" }
+    ) {
+      ...AvatarData
+    }
+    joaoBordalo: file(relativePath: { eq: "team/avatar-joao-bordalo.png" }) {
+      ...AvatarData
+    }
   }
   fragment AvatarData on File {
     childImageSharp {
@@ -265,7 +273,7 @@ const QuemSomosTeam = () => {
 
           <div className={styles.teamContainer}>
             <Typography variant="h3" weight="bold" color="purple">
-              Marketing e Comunicação
+              Comunicação
             </Typography>
             <div className={styles.team}>
               <div className={styles.person}>
@@ -405,7 +413,7 @@ const QuemSomosTeam = () => {
                   Margarida Silva
                 </Typography>
                 <Typography className={styles.personText}>
-                  Influencers
+                  Digital Influencer Marketing
                 </Typography>
               </div>
               <div className={styles.person}>
@@ -414,10 +422,10 @@ const QuemSomosTeam = () => {
                   alt="Nélson Patrício"
                 />
                 <Typography weight="bold" className={styles.personText}>
-                  Nélson Patrício
+                  Nelson Patrício
                 </Typography>
                 <Typography className={styles.personText}>
-                  Influencers
+                  Digital Influencer Marketing
                 </Typography>
               </div>
             </div>
@@ -475,6 +483,26 @@ const QuemSomosTeam = () => {
                 />
                 <Typography weight="bold" className={styles.personText}>
                   Rui Saraiva
+                </Typography>
+                <Typography className={styles.personText}>FrontEnd</Typography>
+              </div>
+              <div className={styles.person}>
+                <Img
+                  fixed={data.fabioFerreira.childImageSharp.fixed}
+                  alt="Fábio Ferreira"
+                />
+                <Typography weight="bold" className={styles.personText}>
+                  Fábio Ferreira
+                </Typography>
+                <Typography className={styles.personText}>FrontEnd</Typography>
+              </div>
+              <div className={styles.person}>
+                <Img
+                  fixed={data.joaoBordalo.childImageSharp.fixed}
+                  alt="João Bordalo"
+                />
+                <Typography weight="bold" className={styles.personText}>
+                  João Bordalo
                 </Typography>
                 <Typography className={styles.personText}>FrontEnd</Typography>
               </div>
