@@ -135,25 +135,6 @@ const QuemSomosTeam = () => {
   return (
     <div className={styles.root} id="equipa">
       <div className={styles.container}>
-        <div className={styles.header}>
-          <Typography
-            variant="smallBody"
-            weight="medium"
-            className={styles.text}
-          >
-            A nossa equipa conta com voluntários que trazem a sua experiência de
-            várias empresas, entre as quais:
-            <br />
-            <br />
-          </Typography>
-          <Typography variant="smallBody" weight="bold" className={styles.text}>
-            Adclick, Bitmaker, Blip, Buildtoo, Cerealis , Cinemax Penafiel,
-            Codavel, Country Manager Portuga, Facebook, GoWithFlow, Homeless,
-            Indra, Jscrambler, Lookatitude LOQR, Miew, Mystic Tua, Oko,
-            Pixelmatters, Tecnibite, Velocidi, Zaask.
-          </Typography>
-        </div>
-
         <div className={styles.teams}>
           <div className={styles.teamContainer}>
             <Typography variant="h3" weight="bold" color="purple">
@@ -189,6 +170,26 @@ const QuemSomosTeam = () => {
 
           <div className={styles.teamContainer}>
             <Typography variant="h3" weight="bold" color="purple">
+              Infraestrutura
+            </Typography>
+            <div className={styles.team}>
+              <div className={styles.person}>
+                <Img
+                  fixed={data.pauloCunha.childImageSharp.fixed}
+                  alt="Paulo Cunha"
+                />
+                <Typography weight="bold" className={styles.personText}>
+                  Paulo Cunha
+                </Typography>
+                <Typography className={styles.personText}>
+                  Infraestrutura e legal
+                </Typography>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.teamContainer}>
+            <Typography variant="h3" weight="bold" color="purple">
               Engenharia
             </Typography>
             <div className={styles.team}>
@@ -214,26 +215,6 @@ const QuemSomosTeam = () => {
                 </Typography>
                 <Typography className={styles.personText}>
                   Desenvolvimento
-                </Typography>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.teamContainer}>
-            <Typography variant="h3" weight="bold" color="purple">
-              Infraestrutura
-            </Typography>
-            <div className={styles.team}>
-              <div className={styles.person}>
-                <Img
-                  fixed={data.pauloCunha.childImageSharp.fixed}
-                  alt="Paulo Cunha"
-                />
-                <Typography weight="bold" className={styles.personText}>
-                  Paulo Cunha
-                </Typography>
-                <Typography className={styles.personText}>
-                  Infraestrutura e legal
                 </Typography>
               </div>
             </div>
