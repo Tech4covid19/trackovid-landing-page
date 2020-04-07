@@ -96,3 +96,10 @@
     }
   }
 }
+
+.share {
+  padding: 15px 20px;
+  text-decoration: none;
+  background: $green;
+  border-radius: 16px;
+}

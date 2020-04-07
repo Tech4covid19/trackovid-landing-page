@@ -79,6 +79,11 @@
   line-height: $line-height-large-cta;
 }
 
+.share {
+  font-size: $font-size-share;
+  line-height: $line-height-share;
+}
+
 .number {
   font-size: $font-size-number;
   line-height: $line-height-number;
