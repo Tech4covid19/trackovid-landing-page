@@ -1,5 +1,6 @@
 import React from "react";
 import { navigate, useStaticQuery, graphql } from "gatsby";
+import http from "http";
 import Helmet from "react-helmet";
 
 import CodigoPostal from "@/sections/codigo-postal";
@@ -10,11 +11,19 @@ import "@/styles/main.module.css";
 
 const getParamFromPathname = pathname => pathname.split("/").pop();
 
-const checkIfImageExists = (imageUrl, bad) => {
-  const img = new Image();
-  img.onerror = bad;
-  img.src = imageUrl;
-};
+function checkIfImageExists(host, path) {
+  const options = {
+    method: "HEAD",
+    host,
+    path: `/${path}.png`,
+  };
+  const req = http.request(options, r => {
+    if (r.statusCode !== 200) {
+      navigate("/");
+    }
+  });
+  req.end();
+}
 
 const query = graphql`
   query {
@@ -41,10 +50,9 @@ const OMeuCodigoPostalPage = ({ location: { pathname } }) => {
     keywords: siteKeywords,
     appImagesUrl,
   } = data.site.siteMetadata;
-  const imageUrl = `${appImagesUrl}/${getParamFromPathname(pathname)}.png`;
-  checkIfImageExists(imageUrl, () => {
-    navigate("/");
-  });
+  const imageId = getParamFromPathname(pathname);
+  const imageUrl = `https://${appImagesUrl}/${imageId}.png`;
+  checkIfImageExists(appImagesUrl, imageId);
   return (
     <Layout>
       <Helmet>
