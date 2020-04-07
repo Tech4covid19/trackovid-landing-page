@@ -64,6 +64,7 @@
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "2.5.1",
     "gatsby-plugin-alias-imports": "1.0.5",
+    "gatsby-plugin-force-trailing-slashes": "1.0.4",
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
     "prettier": "1.19.1",

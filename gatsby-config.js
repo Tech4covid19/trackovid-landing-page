@@ -15,6 +15,7 @@ module.exports = {
     appImagesUrl: "static.covidografia.pt",
   },
   plugins: [
+    "gatsby-plugin-force-trailing-slashes",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
     {

@@ -239,7 +239,7 @@ export default function PerguntasFrequentes() {
             </Button>{" "}
             a nossa stack), marketeers e qualquer outro perfil que nos possa
             ajudar a ajudar! Lê primeiro o nosso{" "}
-            <Button href="/codigo-conduta" type="textLink">
+            <Button href="/codigo-conduta/" type="textLink">
               Código de Conduta
             </Button>
             . Se achas que isto é para ti,{" "}
