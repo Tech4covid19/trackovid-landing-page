@@ -1,5 +1,6 @@
 import React from "react";
 import { navigate, useStaticQuery, graphql } from "gatsby";
+import queryString from "query-string";
 import Helmet from "react-helmet";
 
 import CodigoPostal from "@/sections/codigo-postal";
@@ -7,11 +8,6 @@ import CodigoPostal from "@/sections/codigo-postal";
 import Layout from "@/components/layout";
 
 import "@/styles/main.module.css";
-
-const getParamFromPathname = pathname => {
-  const parts = pathname.split("/");
-  return parts[parts.length - 2];
-};
 
 const checkIfImageExists = (imageUrl, bad) => {
   if (typeof window !== "undefined") {
@@ -37,7 +33,7 @@ const query = graphql`
 `;
 
 // eslint-disable-next-line react/prop-types
-const OMeuCodigoPostalPage = ({ location: { pathname } }) => {
+const OMeuCodigoPostalPage = ({ location: { search } }) => {
   const data = useStaticQuery(query);
   const {
     author,
@@ -46,7 +42,7 @@ const OMeuCodigoPostalPage = ({ location: { pathname } }) => {
     keywords: siteKeywords,
     appImagesUrl,
   } = data.site.siteMetadata;
-  const imageId = getParamFromPathname(pathname);
+  const { imageId } = queryString.parse(search);
   const imageUrl = `https://${appImagesUrl}/${imageId}.png`;
   checkIfImageExists(imageUrl, () => {
     navigate("/");
@@ -65,6 +61,8 @@ const OMeuCodigoPostalPage = ({ location: { pathname } }) => {
         <meta property="og:title" content={siteTitle} />
         <meta property="og:description" content={siteDescription} />
         <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:width" content="476" />
+        <meta property="og:image:height" content="714" />
       </Helmet>
       <CodigoPostal imageUrl={imageUrl} />
     </Layout>
