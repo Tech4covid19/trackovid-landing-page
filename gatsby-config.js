@@ -12,8 +12,10 @@ module.exports = {
     keywords:
       "COVID-19, Coronavírus, app, plataforma, fotografia, sintomas, portugueses",
     appSiteUrl: "https://app.covidografia.pt",
+    appImagesUrl: "static.covidografia.pt",
   },
   plugins: [
+    "gatsby-plugin-force-trailing-slashes",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
     {

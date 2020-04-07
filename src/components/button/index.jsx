@@ -72,6 +72,7 @@ Button.propTypes = {
     "sectionLink",
     "purpleLink",
     "ctaTransparent",
+    "share",
   ]),
   className: PropTypes.string,
 };

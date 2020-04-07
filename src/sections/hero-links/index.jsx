@@ -8,17 +8,17 @@ const HeroLinks = () => {
   return (
     <div className={styles.root}>
       <div className={styles.container}>
-        <Button href="/quem-somos" type="link">
+        <Button href="/quem-somos/" type="link">
           <Typography variant="smallCta" weight="bold" color="orange">
             Quem Somos
           </Typography>
         </Button>
-        <Button href="/privacidade" type="link" className={styles.privacidade}>
+        <Button href="/privacidade/" type="link" className={styles.privacidade}>
           <Typography variant="smallCta" weight="bold" color="orange">
             Privacidade
           </Typography>
         </Button>
-        <Button href="/perguntas-frequentes" type="link">
+        <Button href="/perguntas-frequentes/" type="link">
           <Typography variant="smallCta" weight="bold" color="orange">
             Perguntas Frequentes
           </Typography>

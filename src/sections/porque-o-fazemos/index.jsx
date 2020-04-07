@@ -63,7 +63,7 @@ const PorqueOFazemos = () => {
           </div>
         </div>
         <div className={styles.cta}>
-          <Button href="/perguntas-frequentes" type="ctaTransparent">
+          <Button href="/perguntas-frequentes/" type="ctaTransparent">
             <Typography variant="largeCta" color="orange" weight="bold">
               Perguntas Frequentes
             </Typography>

@@ -39,6 +39,7 @@ Typography.propTypes = {
     "largeCta",
     "number",
     "ul",
+    "share",
   ]),
   weight: PropTypes.oneOf(["regular", "medium", "bold"]),
   color: PropTypes.oneOf([
