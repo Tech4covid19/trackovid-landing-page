@@ -25,6 +25,7 @@ const query = graphql`
         author
         description
         keywords
+        appImagesUrl
       }
     }
   }
@@ -38,10 +39,9 @@ const OMeuCodigoPostalPage = ({ location: { pathname } }) => {
     title: siteTitle,
     description: siteDescription,
     keywords: siteKeywords,
+    appImagesUrl,
   } = data.site.siteMetadata;
-  const imageUrl = `https://staging.static.covidografia.pt/${getParamFromPathname(
-    pathname
-  )}.png`;
+  const imageUrl = `${appImagesUrl}/${getParamFromPathname(pathname)}.png`;
   checkIfImageExists(imageUrl, () => {
     navigate("/");
   });

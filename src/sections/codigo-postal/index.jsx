@@ -23,11 +23,12 @@ const CodigoPostal = ({ imageUrl }) => {
     <div className={styles.root}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <Typography variant="body" weight="bold">
-            Partilhar estado da minha área
+          <Typography className={styles.title} variant="body" weight="bold">
+            Covidografia
           </Typography>
           <Typography variant="smallBody">
-            Partilhar estado da minha área
+            A Covidografia ajuda a avaliar com mais precisão a evolução da
+            pandemia na sua área de residência
           </Typography>
         </div>
         <div>
@@ -40,7 +41,7 @@ const CodigoPostal = ({ imageUrl }) => {
             type="share"
           >
             <Typography variant="share" weight="bold" color="white">
-              Login
+              Veja como está a sua zona
             </Typography>
           </Button>
         </div>
