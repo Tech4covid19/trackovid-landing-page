@@ -61,6 +61,8 @@ const OMeuCodigoPostalPage = ({ location: { search } }) => {
         <meta property="og:title" content={siteTitle} />
         <meta property="og:description" content={siteDescription} />
         <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:width" content="476" />
+        <meta property="og:image:height" content="714" />
       </Helmet>
       <CodigoPostal imageUrl={imageUrl} />
     </Layout>
