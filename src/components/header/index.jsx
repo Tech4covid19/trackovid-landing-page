@@ -105,7 +105,7 @@ export default function Header({ isLandingPage }) {
                 </Typography>
               </Link>
               <Link
-                to="/quem-somos"
+                to="/quem-somos/"
                 className={classNames(styles.link, {
                   [styles.hideMobile]: isLandingPage,
                 })}
@@ -115,7 +115,7 @@ export default function Header({ isLandingPage }) {
                 </Typography>
               </Link>
               <Link
-                to="/privacidade"
+                to="/privacidade/"
                 className={classNames(styles.link, {
                   [styles.hideMobile]: isLandingPage,
                 })}
@@ -125,7 +125,7 @@ export default function Header({ isLandingPage }) {
                 </Typography>
               </Link>
               <Link
-                to="/perguntas-frequentes"
+                to="/perguntas-frequentes/"
                 className={classNames(styles.link, {
                   [styles.hideMobile]: isLandingPage,
                 })}
@@ -165,7 +165,7 @@ export default function Header({ isLandingPage }) {
             </Typography>
           </Link>
           <Link
-            to="/quem-somos"
+            to="/quem-somos/"
             className={classNames(styles.link, {
               [styles.hideMobile]: isLandingPage,
             })}
@@ -175,7 +175,7 @@ export default function Header({ isLandingPage }) {
             </Typography>
           </Link>
           <Link
-            to="/privacidade"
+            to="/privacidade/"
             className={classNames(styles.link, {
               [styles.hideMobile]: isLandingPage,
             })}
@@ -185,7 +185,7 @@ export default function Header({ isLandingPage }) {
             </Typography>
           </Link>
           <Link
-            to="/perguntas-frequentes"
+            to="/perguntas-frequentes/"
             className={classNames(styles.link, {
               [styles.hideMobile]: isLandingPage,
             })}

@@ -32,7 +32,7 @@ export default function Privacidade() {
             forma especial como os dados são tratados e armazenados. Veja mais
             em{" "}
             <Button
-              href="/privacidade#como-tratamos-os-seus-dados"
+              href="/privacidade/#como-tratamos-os-seus-dados"
               type="sectionLink"
             >
               Como tratamos os seus dados.
@@ -56,7 +56,7 @@ export default function Privacidade() {
             processos com princípios fundamentais como “Privacy by Design” e
             “Data Minimization” (ver{" "}
             <Button
-              href="/privacidade#como-tratamos-os-seus-dados"
+              href="/privacidade/#como-tratamos-os-seus-dados"
               type="sectionLink"
             >
               Como tratamos os seus dados.
