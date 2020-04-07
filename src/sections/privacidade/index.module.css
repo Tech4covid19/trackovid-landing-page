@@ -6,15 +6,15 @@
 
 .container {
   max-width: 620px;
-  padding: 102px 54px;
+  padding: 102px 54px 35px;
   margin: 0 auto;
 
   @include breakpoint-mobile-only {
-    padding: 72px 36px;
+    padding: 72px 36px 35px;
   }
 
   @include breakpoint-xs-only {
-    padding: 56px 36px;
+    padding: 56px 36px 35px;
   }
 }
 
