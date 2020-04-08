@@ -32,7 +32,8 @@ const query = graphql`
   }
 `;
 
-const OMeuCodigoPostalPage = () => {
+// eslint-disable-next-line react/prop-types
+const OMeuCodigoPostalPage = ({ location: { search } }) => {
   const data = useStaticQuery(query);
   const {
     author,
@@ -41,34 +42,37 @@ const OMeuCodigoPostalPage = () => {
     keywords: siteKeywords,
     appImagesUrl,
   } = data.site.siteMetadata;
-  if (typeof window !== "undefined") {
-    const { imageId } = queryString.parse(window.location.search);
-    const imageUrl = `https://${appImagesUrl}/${imageId}.png`;
-    checkIfImageExists(imageUrl, () => {
-      navigate("/");
-    });
-    return (
-      <Layout>
-        <Helmet>
-          <title>{siteTitle}</title>
-          <meta name="description" content={siteDescription} />
-          <meta name="keywords" content={siteKeywords} />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" type="image/png" href="favicon.png" />
-          <link rel="icon" type="image/x-icon" href="favicon.ico" />
-          <meta name="language" content="pt-pt" />
-          <meta name="author" content={author} />
-          <meta property="og:title" content={siteTitle} />
-          <meta property="og:description" content={siteDescription} />
-          <meta property="og:image" content={imageUrl} />
-          <meta property="og:image:width" content="476" />
-          <meta property="og:image:height" content="714" />
-        </Helmet>
-        <CodigoPostal imageUrl={imageUrl} />
-      </Layout>
-    );
-  }
-  return null;
+  const { imageId } = queryString.parse(search);
+  checkIfImageExists(`https://${appImagesUrl}/${imageId}.png`, () => {
+    navigate("/");
+  });
+  return (
+    <Layout>
+      <Helmet>
+        <title>{siteTitle}</title>
+        <meta name="description" content={siteDescription} />
+        <meta name="keywords" content={siteKeywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <meta name="language" content="pt-pt" />
+        <meta name="author" content={author} />
+        <meta property="og:title" content={siteTitle} />
+        <meta property="og:description" content={siteDescription} />
+        {imageId && (
+          <meta
+            property="og:image"
+            content={`https://${appImagesUrl}/${imageId}.png`}
+          />
+        )}
+        <meta property="og:image:width" content="476" />
+        <meta property="og:image:height" content="714" />
+      </Helmet>
+      {imageId && (
+        <CodigoPostal imageUrl={`https://${appImagesUrl}/${imageId}.png`} />
+      )}
+    </Layout>
+  );
 };
 
 export default OMeuCodigoPostalPage;
