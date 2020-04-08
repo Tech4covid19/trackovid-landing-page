@@ -1,5 +1,6 @@
 import React from "react";
 import { navigate, useStaticQuery, graphql } from "gatsby";
+import queryString from "query-string";
 import Helmet from "react-helmet";
 
 import CodigoPostal from "@/sections/codigo-postal";
@@ -7,8 +8,6 @@ import CodigoPostal from "@/sections/codigo-postal";
 import Layout from "@/components/layout";
 
 import "@/styles/main.module.css";
-
-const getParamFromPathname = pathname => pathname.split("/").pop();
 
 const checkIfImageExists = (imageUrl, bad) => {
   if (typeof window !== "undefined") {
@@ -34,7 +33,7 @@ const query = graphql`
 `;
 
 // eslint-disable-next-line react/prop-types
-const OMeuCodigoPostalPage = ({ location: { pathname } }) => {
+const OMeuCodigoPostalPage = ({ location: { search } }) => {
   const data = useStaticQuery(query);
   const {
     author,
@@ -43,9 +42,8 @@ const OMeuCodigoPostalPage = ({ location: { pathname } }) => {
     keywords: siteKeywords,
     appImagesUrl,
   } = data.site.siteMetadata;
-  const imageId = getParamFromPathname(pathname);
-  const imageUrl = `https://${appImagesUrl}/${imageId}.png`;
-  checkIfImageExists(imageUrl, () => {
+  const { imageId } = queryString.parse(search);
+  checkIfImageExists(`https://${appImagesUrl}/${imageId}.png`, () => {
     navigate("/");
   });
   return (
@@ -61,9 +59,16 @@ const OMeuCodigoPostalPage = ({ location: { pathname } }) => {
         <meta name="author" content={author} />
         <meta property="og:title" content={siteTitle} />
         <meta property="og:description" content={siteDescription} />
-        <meta property="og:image" content={imageUrl} />
+        <meta
+          property="og:image"
+          content="https://covidografia-share-dashboard-production.s3-eu-west-1.amazonaws.com/share.png"
+        />
+        <meta property="og:image:width" content="476" />
+        <meta property="og:image:height" content="714" />
       </Helmet>
-      <CodigoPostal imageUrl={imageUrl} />
+      {imageId && (
+        <CodigoPostal imageUrl={`https://${appImagesUrl}/${imageId}.png`} />
+      )}
     </Layout>
   );
 };
