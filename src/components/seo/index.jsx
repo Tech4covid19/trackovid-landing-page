@@ -21,6 +21,7 @@ const query = graphql`
 function SEO({ title, description, keywords }) {
   const data = useStaticQuery(query);
   const {
+    siteUrl,
     author,
     title: siteTitle,
     description: siteDescription,
@@ -46,7 +47,7 @@ function SEO({ title, description, keywords }) {
       />
       <meta
         property="og:image"
-        content="https://covidografia-share-dashboard-production.s3-eu-west-1.amazonaws.com/share.png"
+        content={`${siteUrl}/images/covidografia-share.png?v2`}
       />
     </Helmet>
   );
