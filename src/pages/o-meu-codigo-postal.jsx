@@ -41,7 +41,6 @@ const OMeuCodigoPostalPage = ({ location: { search } }) => {
     description: siteDescription,
     keywords: siteKeywords,
     appImagesUrl,
-    siteUrl,
   } = data.site.siteMetadata;
   const { imageId } = queryString.parse(search);
   checkIfImageExists(`https://${appImagesUrl}/${imageId}.png`, () => {
@@ -60,7 +59,10 @@ const OMeuCodigoPostalPage = ({ location: { search } }) => {
         <meta name="author" content={author} />
         <meta property="og:title" content={siteTitle} />
         <meta property="og:description" content={siteDescription} />
-        <meta property="og:image" content={`${siteUrl}/images/share.png`} />
+        <meta
+          property="og:image"
+          content="https://covidografia-share-dashboard-production.s3-eu-west-1.amazonaws.com/share.png"
+        />
         <meta property="og:image:width" content="476" />
         <meta property="og:image:height" content="714" />
       </Helmet>
