@@ -41,6 +41,7 @@ const OMeuCodigoPostalPage = ({ location: { search } }) => {
     description: siteDescription,
     keywords: siteKeywords,
     appImagesUrl,
+    siteUrl,
   } = data.site.siteMetadata;
   const { imageId } = queryString.parse(search);
   checkIfImageExists(`https://${appImagesUrl}/${imageId}.png`, () => {
@@ -59,12 +60,7 @@ const OMeuCodigoPostalPage = ({ location: { search } }) => {
         <meta name="author" content={author} />
         <meta property="og:title" content={siteTitle} />
         <meta property="og:description" content={siteDescription} />
-        {imageId && (
-          <meta
-            property="og:image"
-            content={`https://${appImagesUrl}/${imageId}.png`}
-          />
-        )}
+        <meta property="og:image" content={`${siteUrl}/images/share.png`} />
         <meta property="og:image:width" content="476" />
         <meta property="og:image:height" content="714" />
       </Helmet>
