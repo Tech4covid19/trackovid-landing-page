@@ -11,7 +11,7 @@ const query = graphql`
   query {
     site {
       siteMetadata {
-        appSiteUrl
+        siteUrl
       }
     }
   }
@@ -37,7 +37,7 @@ const CodigoPostal = ({ imageUrl }) => {
         <div className={styles.footer}>
           <Button
             className={styles.shareButton}
-            href={data.site.siteMetadata.appSiteUrl}
+            href={data.site.siteMetadata.siteUrl}
             type="share"
           >
             <Typography variant="share" weight="bold" color="white">
