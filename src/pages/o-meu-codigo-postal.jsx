@@ -27,6 +27,7 @@ const query = graphql`
         description
         keywords
         appImagesUrl
+        fbAppId
       }
     }
   }
@@ -41,6 +42,7 @@ const OMeuCodigoPostalPage = ({ location: { search } }) => {
     description: siteDescription,
     keywords: siteKeywords,
     appImagesUrl,
+    fbAppId,
   } = data.site.siteMetadata;
   const { imageId } = queryString.parse(search);
   checkIfImageExists(`https://${appImagesUrl}/${imageId}.png`, () => {
@@ -57,6 +59,8 @@ const OMeuCodigoPostalPage = ({ location: { search } }) => {
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <meta name="language" content="pt-pt" />
         <meta name="author" content={author} />
+        <meta property="fb:app_id" content={fbAppId} />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={siteTitle} />
         <meta property="og:description" content={siteDescription} />
         <meta
