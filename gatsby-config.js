@@ -13,6 +13,7 @@ module.exports = {
       "COVID-19, Coronavírus, app, plataforma, fotografia, sintomas, portugueses",
     appSiteUrl: "https://app.covidografia.pt",
     appImagesUrl: "static.covidografia.pt",
+    fbAppId: "246657783167062",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
